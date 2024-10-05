@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Kunal Pathak</title>
+
+	<meta name="description" content="Data Governance for AI/ML - Impact of GDPR & EU AI Acts">
+	<meta name="author" content="Kunal Pathak">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./../reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="./../reveal.js/dist/reset.css">
+	<link rel="stylesheet" href="./../reveal.js/dist/theme/my-white.css" id="theme">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="./../reveal.js/plugin/highlight/monokai.css">
+
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-markdown>
+				<textarea data-template>
+# Data Governance for AI Systems
+
+</br>
+
+## based on GDPR & EU AI Act guidelines
+
+</br>
+
+Author - <u><a href="https://www.kunal-pathak.com" target="_blank" rel="noopener noreferrer">Kunal Pathak</a></u>
+
+---
+
+# Focus
+
+- Explore the impact on Data Governance in AI/ML activities due to:
+	- the GDPR Act and
+	- the EU AI Act
+
+Note:
+
+---
+
+# Agenda
+
+- Summarize GDPR and EU AI Act regulatory requirements.
+- Discuss their impact on data governance of AI/ML systems.
+- Provide practical guidance for responsible data handling in AI/ML Lifecycle.
+
+---
+
+# Overview
+
+| Aspect | GDPR | EU AI Act |
+| --------------- | ---------------------------------------------- | ---------------------------------------------- |
+| Focus | Personal data protection and privacy | Governance of AI systems |
+| Scope | All personal data processing | AI systems, especially high-risk ones |
+| Fully effective | 2018 | 2026 |
+| Requirements | Data minimization, purpose limitation, consent | Risk assessment, transparency, human oversight |
+
+---
+
+# Timelines
+
+![](./../assets//010-acts_timeline.png)
+
+---
+
+# GDPR + EU AI Act
+
+- GDPR lays the groundwork for data protection; the AI Act expands with specific AI requirements.
+- GDPR targets general data processing, while the AI Act tackles AI-specific challenges.
+- GDPR covers all personal data; the AI Act zeroes in on AI systems.
+- The AI Act introduces AI risk categories and human oversight needs.
+
+---
+
+# Impact on Data Governance
+
+This section examines six key aspects of data governance in response to these regulations:
+
+1. **Data Collection and Consent**: Ensures lawful and transparent data collection.
+2. **Data Quality and Preparation**: Addresses biases and errors in data handling.
+3. **Data Security and Access Control**: Protects sensitive ML model information.
+4. **Data Minimization and Purpose Limitation**: Balances ML data needs with privacy principles.
+5. **Data Transparency and Explainability**: Builds trust and enables AI system oversight.
+6. **Data Subject Rights**: Ensures individual autonomy and control in AI decisions.
+
+---
+
+## 1. Data Collection and Consent
+
+- **Purpose**
+	- Ensure lawful data collection and processing with authorization from data subjects.
+- **Regulatory Requirements**
+	- `GDPR Article 6`: Lawful bases for data processing
+	- `GDPR Article 7`:Explicit consent for ML training.
+	- `GDPR Articles 13-14`: Clear information on data collection, purpose, and rights.
+	- `GDPR Article 35`: Data Protection Impact Assessments (DPIAs) for high-risk AI use cases.
+	- `EU AI Act Article 10`: Data governance for high-risk AI systems.
+- **Practical Steps**
+	- Identify lawful data processing basis (e.g., consent, legitimate interests).
+	- Develop concise consent forms for ML training.
+	- Create transparent privacy notices for data use in ML.
+	- Implement a DPIA process for high-risk ML projects.
+
+---
+
+## 2. Data Quality and Preparation
+
+- **Purpose**
+	- Ensure high-quality, unbiased data for accurate ML models.
+- **Regulatory Requirements**
+	- `GDPR Article 5(1)(d)`: Accuracy and relevance of training data.
+	- `EU AI Act Article 10(3)`: Address biases to prevent discrimination.
+	- `EU AI Act Article 10`: Data validation and error handling.
+- **Practical Steps**
+	- Implement data cleaning to remove errors.
+	- Develop validation protocols for accuracy.
+	- Conduct regular data quality audits.
+	- Implement bias detection and mitigation.
+	- Document data preparation steps.
+
+---
+
+## 3. Data Security and Access Control
+
+- **Purpose**
+	- Protect data confidentiality and integrity.
+- **Regulatory Requirements**
+	- `GDPR Article 32`: Technical and organizational safety measures.
+	- `EU AI Act Article 12`: Logging and traceability.
+- **Practical Steps**
+	- Use encryption for data at rest and transit.
+	- Establish role-based access control (RBAC).
+	- Apply pseudonymization techniques.
+	- Implement secure storage and transfer protocols.
+	- Set up logging and monitoring systems.
+
+---
+
+## 4. Data Minimization and Purpose Limitation
+
+- **Purpose**
+	- Collect and use only necessary data.
+- **Regulatory Requirements**
+	- `GDPR Article 5(1)(c)`: Data minimization.
+	- `GDPR Article 6(4)`: Purpose limitation.
+	- `EU AI Act Article 10`: Align data use with AI purpose.
+- **Practical Steps**
+	- Conduct audits to remove unnecessary data.
+	- Implement data retention policies.
+	- Design models to minimize personal data use.
+	- Regularly review and update data purposes.
+
+---
+
+## 5. Data Transparency and Explainability
+
+- **Purpose**
+	- Ensure transparency in data use and model decisions.
+- **Regulatory Requirements**
+	- `GDPR Article 15(1)(h)`: Explain AI decisions.
+	- `EU AI Act Articles 11-13`: Record-keeping and traceability.
+- **Practical Steps**
+	- Develop clear ML process documentation.
+	- Implement data lineage tracking.
+	- Use explainable AI techniques.
+	- Create user-friendly model decision explanations.
+	- Maintain and update AI documentation.
+
+---
+
+## 6. Data Subject Rights
+
+- **Purpose**
+	- Respect and facilitate data subject rights in AI systems.
+- **Regulatory Requirements**
+	- `GDPR Articles 15-22`: Data subject rights (access, rectification, erasure, etc.)
+	- `GDPR Article 22`: Right not to be subject to solely automated decisions.
+	- `EU AI Act Article 52`: Transparency obligations for certain AI systems.
+	- `EU AI Act Articles 14, 29`: Human oversight & right to explanation for high-risk AI systems.
+- **Practical Steps**
+	- Implement systems for handling data subject access requests.
+	- Develop processes for data rectification and erasure in AI systems.
+	- Create mechanisms to opt out of solely automated decisions.
+	- Ensure AI systems can provide meaningful explanations for high-risk decisions.
+	- Implement human oversight measures for high-risk AI systems.
+	- Regularly train staff on handling data subject rights in AI context.
+
+---
+
+# Best Practices
+
+- Document all data sources, types, and flows.
+- Develop data rectification and erasure processes.
+- Ensure AI systems explain automated decisions.
+- Form cross-functional compliance teams.
+- Implement data version control and traceability.
+- Train staff on governance and compliance.
+- Deploy technical solutions like DLP.
+- Conduct periodic internal audits.
+
+---
+
+# Practical Examples
+
+- **Fair Data Preprocessing**
+	- Example: Credit Scoring
+		- Remove protected attributes like gender and race
+		- Apply reweighing or prejudice remover algorithms
+- **Federated Learning**
+	- Example: Healthcare Models
+		- Train on decentralized data
+		- Aggregate updates without central collection
+- **Explainable AI**
+	- Example: Insurance Risk
+		- Use interpretable models or SHAP values
+		- Highlight feature importance and decisions
+- **Continuous Monitoring**
+	- Example: Fraud Detection
+		- Detect data drift
+		- Automate retraining with oversight
+
+---
+
+# Key Takeaways
+
+- Integrate data governance in AI/ML Lifecycle early.
+- Follow the GDPR and EU AI Act guidance for responsible data use.
+- Use a cross-functional approach combining legal, technical, and ethical aspects.
+- Prioritize continuous monitoring, auditing, and improvement in Data Governance practices.
+
+---
+
+# Further Reading
+
+- **Understanding the EU AI Act: Overview and Timelines**
+	- <a href="https://duckduckgo.com" target="_blank" rel="noopener noreferrer">Learn More</a>
+
+- **Explore the EU AI Act with a ChatGPT-style Bot**
+	- <a href="https://duckduckgo.com" target="_blank" rel="noopener noreferrer">Try it Here</a>
+
+- **About the Author: Kunal Pathak**
+	- <a href="https://www.kunal-pathak.com" target="_blank" rel="noopener noreferrer">Portfolio Website</a>
+	- <a href="https://github.com/kanad13" target="_blank" rel="noopener noreferrer">GitHub Contributions</a>
+	- <a href="https://www.linkedin.com/in/kunal-pathak-profile/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+
+---
+
+# references
+
+- Full Text of the GDPR Act - [click
+here](https://eur-lex.europa.eu/EN/legal-content/summary/general-data-protection-regulation-gdpr.html)
+- Full Text of the EU AI Act - [click here](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
+- Up-to-date developments and analyses of the EU AI Act -[click here](https://artificialintelligenceact.eu)
+- Details from the European Parliament Think Tank - [click
+here](https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI(2021)698792)
+
+---
+
+# Acknowledgments
+
+- I would like to express my gratitude to the European Union for their work on the AI Act, which aims to ensure the safe and ethical development of AI technologies.
+- This presentation is created with the intention of promoting awareness and understanding of the Act among interested individuals and organizations.
+
+---
+
+# Disclaimer
+
+- By viewing this presentation, you acknowledge and agree to the terms of this disclaimer.
+	- The information presented in this presentation regarding the GDPR & EU AI Acts is based on my personal understanding and interpretation. These insights and recommendations are my own and do not represent the official stance of any company, organization, or the European Union.
+	- This presentation is for informational purposes only and should not be considered as legal advice.
+	- For the most accurate and up-to-date information, please refer to official EU resources.
+	- I am not afflicted in any way to the European Union. I am presenting this information as an individual interested in the topic.
+	- No copyright infringement is intended. All legal rights belong to the EU. The material used in this presentation is for educational purposes and falls under fair use.
+	- I bear no legal responsibility for any actions taken based on the information provided in this presentation.
+	- Companies and individuals should conduct their own research and consult with qualified legal experts before implementing any compliance measures.
+
+---
+
+## thank you
+
+</br>
+
+<u><a href="https://www.kunal-pathak.com" target="_blank" rel="noopener noreferrer">Kunal Pathak</a></u>
+
+  </textarea>
+			</section>
+		</div>
+	</div>
+	<script src="./../reveal.js/dist/reveal.js"></script>
+	<script src="./../reveal.js/plugin/zoom/zoom.js"></script>
+	<script src="./../reveal.js/plugin/notes/notes.js"></script>
+	<script src="./../reveal.js/plugin/search/search.js"></script>
+	<script src="./../reveal.js/plugin/markdown/markdown.js"></script>
+	<script src="./../reveal.js/plugin/highlight/highlight.js"></script>
+	<script src="./../reveal.js/plugin/menu/menu.js"></script>
+
+	<script>
+		Reveal.initialize({
+
+			// Activate the scroll view
+			view: 'scroll',
+
+			// Force the scrollbar to remain visible
+			scrollProgress: true,
+
+			// Display presentation control arrows
+			controls: true,
+
+			// Help the user learn the controls by providing hints, for example by
+			// bouncing the down arrow when they first encounter a vertical slide
+			controlsTutorial: true,
+
+			// Determines where controls appear, "edges" or "bottom-right"
+			controlsLayout: 'bottom-right',
+
+			// Visibility rule for backwards navigation arrows; "faded", "hidden"
+			// or "visible"
+			controlsBackArrows: 'visible',
+
+			// Display a presentation progress bar
+			progress: true,
+
+			// Display the page number of the current slide
+			// - true:    Show slide number
+			// - false:   Hide slide number
+			//
+			// Can optionally be set as a string that specifies the number formatting:
+			// - "h.v":   Horizontal . vertical slide number (default)
+			// - "h/v":   Horizontal / vertical slide number
+			// - "c":   Flattened slide number
+			// - "c/t":   Flattened slide number / total slides
+			//
+			// Alternatively, you can provide a function that returns the slide
+			// number for the current slide. The function should take in a slide
+			// object and return an array with one string [slideNumber] or
+			// three strings [n1,delimiter,n2]. See #formatSlideNumber().
+			slideNumber: "h/v",
+
+			// Can be used to limit the contexts in which the slide number appears
+			// - "all":      Always show the slide number
+			// - "print":    Only when printing to PDF
+			// - "speaker":  Only in the speaker view
+			showSlideNumber: 'all',
+
+			// Use 1 based indexing for # links to match slide number (default is zero
+			// based)
+			hashOneBasedIndex: false,
+
+			// Add the current slide number to the URL hash so that reloading the
+			// page/copying the URL will return you to the same slide
+			hash: true,
+
+			// Flags if we should monitor the hash and change slides accordingly
+			respondToHashChanges: true,
+
+			// Enable support for jump-to-slide navigation shortcuts
+			jumpToSlide: true,
+
+			// Push each slide change to the browser history.  Implies `hash: true`
+			history: true,
+
+			// Enable keyboard shortcuts for navigation
+			keyboard: true,
+
+			// Optional function that blocks keyboard events when retuning false
+			//
+			// If you set this to 'focused', we will only capture keyboard events
+			// for embedded decks when they are in focus
+			keyboardCondition: null,
+
+			// Disables the default reveal.js slide layout (scaling and centering)
+			// so that you can use custom CSS layout
+			disableLayout: false,
+
+			// Enable the slide overview mode
+			overview: true,
+
+			// Vertical centering of slides
+			center: true,
+
+			// Enables touch navigation on devices with touch input
+			touch: true,
+
+			// Loop the presentation
+			loop: false,
+
+			// Change the presentation direction to be RTL
+			rtl: false,
+
+			// Changes the behavior of our navigation directions.
+			//
+			// "default"
+			// Left/right arrow keys step between horizontal slides, up/down
+			// arrow keys step between vertical slides. Space key steps through
+			// all slides (both horizontal and vertical).
+			//
+			// "linear"
+			// Removes the up/down arrows. Left/right arrows step through all
+			// slides (both horizontal and vertical).
+			//
+			// "grid"
+			// When this is enabled, stepping left/right from a vertical stack
+			// to an adjacent vertical stack will land you at the same vertical
+			// index.
+			//
+			// Consider a deck with six slides ordered in two vertical stacks:
+			// 1.1    2.1
+			// 1.2    2.2
+			// 1.3    2.3
+			//
+			// If you're on slide 1.3 and navigate right, you will normally move
+			// from 1.3 -> 2.1. If "grid" is used, the same navigation takes you
+			// from 1.3 -> 2.3.
+			navigationMode: 'default',
+
+			// Randomizes the order of slides each time the presentation loads
+			shuffle: false,
+
+			// Turns fragments on and off globally
+			fragments: true,
+
+			// Flags whether to include the current fragment in the URL,
+			// so that reloading brings you to the same fragment position
+			fragmentInURL: true,
+
+			// Flags if the presentation is running in an embedded mode,
+			// i.e. contained within a limited portion of the screen
+			embedded: false,
+
+			// Flags if we should show a help overlay when the question-mark
+			// key is pressed
+			help: true,
+
+			// Flags if it should be possible to pause the presentation (blackout)
+			pause: true,
+
+			// Flags if speaker notes should be visible to all viewers
+			showNotes: false,
+
+			// Global override for autolaying embedded media (video/audio/iframe)
+			// - null:   Media will only autoplay if data-autoplay is present
+			// - true:   All media will autoplay, regardless of individual setting
+			// - false:  No media will autoplay, regardless of individual setting
+			autoPlayMedia: null,
+
+			// Global override for preloading lazy-loaded iframes
+			// - null:   Iframes with data-src AND data-preload will be loaded when within
+			//           the viewDistance, iframes with only data-src will be loaded when visible
+			// - true:   All iframes with data-src will be loaded when within the viewDistance
+			// - false:  All iframes with data-src will be loaded only when visible
+			preloadIframes: null,
+
+			// Can be used to globally disable auto-animation
+			autoAnimate: true,
+
+			// Optionally provide a custom element matcher that will be
+			// used to dictate which elements we can animate between.
+			autoAnimateMatcher: null,
+
+			// Default settings for our auto-animate transitions, can be
+			// overridden per-slide or per-element via data arguments
+			autoAnimateEasing: 'ease',
+			autoAnimateDuration: 1.0,
+			autoAnimateUnmatched: true,
+
+			// CSS properties that can be auto-animated. Position & scale
+			// is matched separately so there's no need to include styles
+			// like top/right/bottom/left, width/height or margin.
+			autoAnimateStyles: [
+				'opacity',
+				'color',
+				'background-color',
+				'padding',
+				'font-size',
+				'line-height',
+				'letter-spacing',
+				'border-width',
+				'border-color',
+				'border-radius',
+				'outline',
+				'outline-offset',
+			],
+
+			// Controls automatic progression to the next slide
+			// - 0:      Auto-sliding only happens if the data-autoslide HTML attribute
+			//           is present on the current slide or fragment
+			// - 1+:     All slides will progress automatically at the given interval
+			// - false:  No auto-sliding, even if data-autoslide is present
+			autoSlide: 0,
+
+			// Stop auto-sliding after user input
+			autoSlideStoppable: true,
+
+			// Use this method for navigation when auto-sliding (defaults to navigateNext)
+			autoSlideMethod: null,
+
+			// Specify the average time in seconds that you think you will spend
+			// presenting each slide. This is used to show a pacing timer in the
+			// speaker view
+			defaultTiming: null,
+
+			// Enable slide navigation via mouse wheel
+			mouseWheel: true,
+
+			// Opens links in an iframe preview overlay
+			// Add `data-preview-link` and `data-preview-link="false"` to customise each link
+			// individually
+			previewLinks: false,
+
+			// Exposes the reveal.js API through window.postMessage
+			postMessage: true,
+
+			// Dispatches all reveal.js events to the parent window through postMessage
+			postMessageEvents: false,
+
+			// Focuses body when page changes visibility to ensure keyboard shortcuts work
+			focusBodyOnPageVisibilityChange: true,
+
+			// Transition style
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// Transition speed
+			transitionSpeed: 'default', // default/fast/slow
+
+			// Transition style for full page slide backgrounds
+			backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+
+			// The maximum number of pages a single slide can expand onto when printing
+			// to PDF, unlimited by default
+			pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+
+			// Prints each fragment on a separate slide
+			pdfSeparateFragments: true,
+
+			// Offset used to reduce the height of content within exported PDF pages.
+			// This exists to account for environment differences based on how you
+			// print to PDF. CLI printing options, like phantomjs and wkpdf, can end
+			// on precisely the total height of the document whereas in-browser
+			// printing has to end one pixel before.
+			pdfPageHeightOffset: -1,
+
+			// Number of slides away from the current that are visible
+			viewDistance: 10,
+
+			// Number of slides away from the current that are visible on mobile
+			// devices. It is advisable to set this to a lower number than
+			// viewDistance in order to save resources.
+			mobileViewDistance: 2,
+
+			// The display mode that will be used to show slides
+			display: 'block',
+
+			// Hide cursor if inactive
+			hideInactiveCursor: true,
+
+			// Time before the cursor is hidden (in ms)
+			hideCursorTime: 5000,
+
+
+			// https://github.com/denehyg/reveal.js-menu
+
+			menu: {
+				// Specifies which side of the presentation the menu will
+				// be shown. Use 'left' or 'right'.
+				side: 'left',
+
+				// Specifies the width of the menu.
+				// Can be one of the following:
+				// 'normal', 'wide', 'third', 'half', 'full', or
+				// any valid css length value
+				width: 'normal',
+
+				// Add slide numbers to the titles in the slide list.
+				// Use 'true' or format string (same as reveal.js slide numbers)
+				numbers: true,
+
+				// Specifies which slide elements will be used for generating
+				// the slide titles in the menu. The default selects the first
+				// heading element found in the slide, but you can specify any
+				// valid css selector and the text from the first matching
+				// element will be used.
+				// Note: that a section data-menu-title attribute or an element
+				// with a menu-title class will take precedence over this option
+				titleSelector: 'h1, h2, h3, h4, h5, h6',
+
+				// If slides do not have a matching title, attempt to use the
+				// start of the text content as the title instead
+				useTextContentForMissingTitles: true,
+
+				// Hide slides from the menu that do not have a title.
+				// Set to 'true' to only list slides with titles.
+				hideMissingTitles: false,
+
+				// Adds markers to the slide titles to indicate the
+				// progress through the presentation. Set to 'false'
+				// to hide the markers.
+				markers: true,
+
+				// Specify custom panels to be included in the menu, by
+				// providing an array of objects with 'title', 'icon'
+				// properties, and either a 'src' or 'content' property.
+				custom: false,
+
+				// Specifies the themes that will be available in the themes
+				// menu panel. Set to 'true' to show the themes menu panel
+				// with the default themes list. Alternatively, provide an
+				// array to specify the themes to make available in the
+				// themes menu panel, for example...
+				//
+				// [
+				//     { name: 'Black', theme: 'dist/theme/black.css' },
+				//     { name: 'White', theme: 'dist/theme/white.css' },
+				//     { name: 'League', theme: 'dist/theme/league.css' },
+				//     {
+				//       name: 'Dark',
+				//       theme: 'lib/reveal.js/dist/theme/black.css',
+				//       highlightTheme: 'lib/reveal.js/plugin/highlight/monokai.css'
+				//     },
+				//     {
+				//       name: 'Code: Zenburn',
+				//       highlightTheme: 'lib/reveal.js/plugin/highlight/zenburn.css'
+				//     }
+				// ]
+				//
+				// Note: specifying highlightTheme without a theme will
+				// change the code highlight theme while leaving the
+				// presentation theme unchanged.
+				themes: true,
+
+				// Specifies the path to the default theme files. If your
+				// presentation uses a different path to the standard reveal
+				// layout then you need to provide this option, but only
+				// when 'themes' is set to 'true'. If you provide your own
+				// list of themes or 'themes' is set to 'false' the
+				// 'themesPath' option is ignored.
+				themesPath: '/reveal.js/dist/theme/',
+
+				// Specifies if the transitions menu panel will be shown.
+				// Set to 'true' to show the transitions menu panel with
+				// the default transitions list. Alternatively, provide an
+				// array to specify the transitions to make available in
+				// the transitions panel, for example...
+				// ['None', 'Fade', 'Slide']
+				transitions: ['None', 'Fade', 'Slide', 'Convex', 'Concave', 'Zoom'],
+
+				// Adds a menu button to the slides to open the menu panel.
+				// Set to 'false' to hide the button.
+				openButton: true,
+
+				// If 'true' allows the slide number in the presentation to
+				// open the menu panel. The reveal.js slideNumber option must
+				// be displayed for this to take effect
+				openSlideNumber: true,
+
+				// If true allows the user to open and navigate the menu using
+				// the keyboard. Standard keyboard interaction with reveal
+				// will be disabled while the menu is open.
+				keyboard: false,
+
+				// Normally the menu will close on user actions such as
+				// selecting a menu item, or clicking the presentation area.
+				// If 'true', the sticky option will leave the menu open
+				// until it is explicitly closed, that is, using the close
+				// button or pressing the ESC or m key (when the keyboard
+				// interaction option is enabled).
+				sticky: true,
+
+				// If 'true' standard menu items will be automatically opened
+				// when navigating using the keyboard. Note: this only takes
+				// effect when both the 'keyboard' and 'sticky' options are enabled.
+				autoOpen: true,
+
+				// If 'true' the menu will not be created until it is explicitly
+				// requested by calling RevealMenu.init(). Note this will delay
+				// the creation of all menu panels, including custom panels, and
+				// the menu button.
+				delayInit: false,
+
+				// If 'true' the menu will be shown when the menu is initialised.
+				openOnInit: false,
+
+				// By default the menu will load it's own font-awesome library
+				// icons. If your presentation needs to load a different
+				// font-awesome library the 'loadIcons' option can be set to false
+				// and the menu will not attempt to load the font-awesome library.
+				loadIcons: true,
+			},
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight] //, RevealMenu
+		});
+	</script>
+</body>
+
+</html>
