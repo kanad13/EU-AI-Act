@@ -11,7 +11,7 @@ if [ ! -d "$destination_folder" ]; then
 fi
 
 # Execute the copy command
-cp -R "$source_folder/.gitignore" "$source_folder/readme.md" "$source_folder/back" "$source_folder/decks" "$destination_folder/"
+cp -R "$source_folder/.gitignore" "$source_folder/readme.md" "$source_folder/assets" "$source_folder/back" "$source_folder/decks" "$destination_folder/"
 
 echo "Copy completed."
 
