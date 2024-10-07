@@ -19,12 +19,12 @@ It helps individuals and organizations understand the impact of this Act on AI d
      - Key points of the legislation
      - Implementation timelines
      - Potential impacts on companies and individuals
-   - [Link to the presentation](https://kanad13.github.io/EU-AI-Act/decks/data-governance.html)
+   - [Link to the presentation](https://kanad13.github.io/EU-AI-Act/decks/EU_AI_Act-in_2_mins.html)
 
-3. **Deep Dive into the EU AI Act**
+3. **Practical Guide to EU AI Act**
 
-   - A comprehensive exploration of the EU AI Act, covering various topics related to the legislation in detail.
-   - [Link to the document](https://kanad13.github.io/EU-AI-Act/decks/data-governance.html)
+   - Handy guide for the EU AI Act with practical steps & relevant examples
+   - [Link to the document](https://github.com/kanad13/EU-AI-Act/blob/main/decks/EU_AI_Act.md)
 
 ## Purpose
 
