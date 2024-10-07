@@ -1,7 +1,7 @@
 # index
 
 - **Purpose**
-  - This page lists resources related to the GDPR & EU AI Act
+  - This page lists resources related to the GDPR & EU AI Acts.
 - **Resources**
   - `About EU AI Act`
     - Quick introduction to the EU AI Act in 2 mins - <a href="https://kanad13.github.io/EU-AI-Act/decks/EU_AI_Act-in_2_mins.html" target="_blank" rel="noopener noreferrer">Slides here</a>

@@ -37,7 +37,7 @@
 
 </br>
 
-## in 2 minutes
+##### in 2 minutes
 
 </br>
 
@@ -45,207 +45,236 @@ Author - <u><a href="https://www.kunal-pathak.com" target="_blank" rel="noopener
 
 ---
 
-# Focus
+# This presentation is ...
 
 - A concise 2-minute overview of the EU AI Act, including:
 	- Key points of the legislation
 	- Implementation timelines
 	- Potential impacts on companies and individuals
-- This deck is a concise version of my "Practical Guide to EU AI Act". You can access it here.
+- This slide deck is a shorter version of my
+<u><a href="https://github.com/kanad13/EU-AI-Act/blob/main/decks/EU_AI_Act.md" target="_blank" rel="noopener noreferrer">Practical Guide to EU AI Act.</a></u>
 
 Note:
 
 ---
 
-# Agenda
+# Table of Contents
 
-- Summarize GDPR and EU AI Act regulatory requirements.
-- Discuss their impact on data governance of AI/ML systems.
-- Provide practical guidance for responsible data handling in AI/ML Lifecycle.
-
----
-
-# Overview
-
-| Aspect          | GDPR                                           | EU AI Act                                      |
-| --------------- | ---------------------------------------------- | ---------------------------------------------- |
-| Focus           | Personal data protection and privacy           | Governance of AI systems                       |
-| Scope           | All personal data processing                   | AI systems, especially high-risk ones          |
-| Fully effective | 2018                                           | 2026                                           |
-| Requirements    | Data minimization, purpose limitation, consent | Risk assessment, transparency, human oversight |
+1. Introduction to EU AI Act
+2. Risk-Based Approach
+3. High-Risk AI Systems
+4. General Purpose AI Systems
+5. Governance and Enforcement
+6. Support for Innovation and SMEs
+7. Implementation Timeline
+8. Key Takeaways
 
 ---
 
-# Timelines
+# Introduction to EU AI Act
 
-![](./../assets//010-acts_timeline.png)
+- **World's first comprehensive AI law**
+	- Aims to address AI risks and promote innovation
+- **Key objectives**
+	- Protect fundamental rights and safety
+	- Enhance trust in AI
+	- Harmonize rules across EU
+- **Scope**
+	- Applies to AI providers and users in EU
+	- Includes non-EU entities when output used in EU
 
----
+Note:
 
-# GDPR + EU AI Act
-
-- GDPR lays the groundwork for data protection; the AI Act expands with specific AI requirements.
-- GDPR targets general data processing, while the AI Act tackles AI-specific challenges.
-- GDPR covers all personal data; the AI Act zeroes in on AI systems.
-- The AI Act introduces AI risk categories and human oversight needs.
-
----
-
-# Impact on Data Governance
-
-This section examines six key aspects of data governance in response to these regulations:
-
-1. **Data Collection and Consent**: Ensures lawful and transparent data collection.
-2. **Data Quality and Preparation**: Addresses biases and errors in data handling.
-3. **Data Security and Access Control**: Protects sensitive ML model information.
-4. **Data Minimization and Purpose Limitation**: Balances ML data needs with privacy principles.
-5. **Data Transparency and Explainability**: Builds trust and enables AI system oversight.
-6. **Data Subject Rights**: Ensures individual autonomy and control in AI decisions.
+- **Context**
+- Responds to growing AI influence and potential risks
+- Balances innovation with ethical considerations
+- **Exclusions**
+- Military and national security applications
+- AI used solely for R&D purposes
+- **Definition of AI System**
+- Machine-based system with varying autonomy
+- Generates outputs like predictions or decisions
 
 ---
 
-## 1. Data Collection and Consent
+# Risk-Based Approach
 
-- **Purpose**
-  - Ensure lawful data collection and processing with authorization from data subjects.
-- **Regulatory Requirements**
-  - `GDPR Article 6`: Lawful bases for data processing
-  - `GDPR Article 7`:Explicit consent for ML training.
-  - `GDPR Articles 13-14`: Clear information on data collection, purpose, and rights.
-  - `GDPR Article 35`: Data Protection Impact Assessments (DPIAs) for high-risk AI use cases.
-  - `EU AI Act Article 10`: Data governance for high-risk AI systems.
-- **Practical Steps**
-  - Identify lawful data processing basis (e.g., consent, legitimate interests).
-  - Develop concise consent forms for ML training.
-  - Create transparent privacy notices for data use in ML.
-  - Implement a DPIA process for high-risk ML projects.
+- **Four risk categories**
+	- Unacceptable risk (prohibited)
+	- High risk (strict requirements)
+	- Limited risk (transparency obligations)
+	- Minimal risk (no new requirements)
+- **Examples**
+	- Unacceptable: Social scoring systems
+	- High risk: AI in critical infrastructure, employment
+	- Limited risk: Chatbots, emotion recognition systems
+- **Diagram pending**
 
----
+Note:
 
-## 2. Data Quality and Preparation
-
-- **Purpose**
-  - Ensure high-quality, unbiased data for accurate ML models.
-- **Regulatory Requirements**
-  - `GDPR Article 5(1)(d)`: Accuracy and relevance of training data.
-  - `EU AI Act Article 10(3)`: Address biases to prevent discrimination.
-  - `EU AI Act Article 10`: Data validation and error handling.
-- **Practical Steps**
-  - Implement data cleaning to remove errors.
-  - Develop validation protocols for accuracy.
-  - Conduct regular data quality audits.
-  - Implement bias detection and mitigation.
-  - Document data preparation steps.
+- **Unacceptable Risk**
+	- Includes exploitation of vulnerabilities, subliminal manipulation
+	- Some exceptions for law enforcement use
+- **High Risk**
+	- Covers AI in education, justice administration, border control
+	- Subject to conformity assessments
+- **Limited Risk**
+	- Focuses on transparency to users
+	- Includes disclosure requirements for deep fakes
+- **Minimal Risk**
+	- Majority of AI systems fall here
+	- Examples: Spam filters, AI-enabled video games
 
 ---
 
-## 3. Data Security and Access Control
+# High-Risk AI Systems
 
-- **Purpose**
-  - Protect data confidentiality and integrity.
-- **Regulatory Requirements**
-  - `GDPR Article 32`: Technical and organizational safety measures.
-  - `EU AI Act Article 12`: Logging and traceability.
-- **Practical Steps**
-  - Use encryption for data at rest and transit.
-  - Establish role-based access control (RBAC).
-  - Apply pseudonymization techniques.
-  - Implement secure storage and transfer protocols.
-  - Set up logging and monitoring systems.
+- **1 out of 4**
+	- 4 risk categories defined by the EU AI Act
+	- These are Unacceptable, High, Limited & Minimal risk.
+	- This slide focuses on High risk AI systems
+- **Key requirements for providers of High-Risk AI systems**
+	- Risk assessment and mitigation
+	- Data governance and documentation
+	- Human oversight
+	- Accuracy, robustness, and cybersecurity
+- **Obligations for deployers of High-Risk AI systems**
+	- Use according to instructions
+	- Monitor operation and report incidents
+	- Conduct data protection impact assessments
 
----
-
-## 4. Data Minimization and Purpose Limitation
-
-- **Purpose**
-  - Collect and use only necessary data.
-- **Regulatory Requirements**
-  - `GDPR Article 5(1)(c)`: Data minimization.
-  - `GDPR Article 6(4)`: Purpose limitation.
-  - `EU AI Act Article 10`: Align data use with AI purpose.
-- **Practical Steps**
-  - Conduct audits to remove unnecessary data.
-  - Implement data retention policies.
-  - Design models to minimize personal data use.
-  - Regularly review and update data purposes.
+Note:
+- **Conformity Assessment**
+	- Mandatory pre-market assessment
+	- Self-assessment for most systems
+	- Third-party assessment for specific cases (e.g., remote biometric identification)
+- **EU Database**
+	- Public registry for high-risk AI systems
+	- Includes system details, intended purpose, conformity status
+	- Aims to increase transparency and facilitate oversight
 
 ---
 
-## 5. Data Transparency and Explainability
+# General Purpose AI Systems
 
-- **Purpose**
-  - Ensure transparency in data use and model decisions.
-- **Regulatory Requirements**
-  - `GDPR Article 15(1)(h)`: Explain AI decisions.
-  - `EU AI Act Articles 11-13`: Record-keeping and traceability.
-- **Practical Steps**
-  - Develop clear ML process documentation.
-  - Implement data lineage tracking.
-  - Use explainable AI techniques.
-  - Create user-friendly model decision explanations.
-  - Maintain and update AI documentation.
+- **Obligations for GPAI providers**
+	- Prepare technical documentation
+	- Provide compliance information to downstream providers
+	- Establish copyright policy
+	- Publish training content summary
+- **AI Office oversight**
+	- Monitors GPAI compliance
+	- Conducts evaluations and investigations
+	- Can impose corrective measures or fines
 
----
-
-## 6. Data Subject Rights
-
-- **Purpose**
-  - Respect and facilitate data subject rights in AI systems.
-- **Regulatory Requirements**
-  - `GDPR Articles 15-22`: Data subject rights (access, rectification, erasure, etc.)
-  - `GDPR Article 22`: Right not to be subject to solely automated decisions.
-  - `EU AI Act Article 52`: Transparency obligations for certain AI systems.
-  - `EU AI Act Articles 14, 29`: Human oversight & right to explanation for high-risk AI systems.
-- **Practical Steps**
-  - Implement systems for handling data subject access requests.
-  - Develop processes for data rectification and erasure in AI systems.
-  - Create mechanisms to opt out of solely automated decisions.
-  - Ensure AI systems can provide meaningful explanations for high-risk decisions.
-  - Implement human oversight measures for high-risk AI systems.
-  - Regularly train staff on handling data subject rights in AI context.
+Note:
+- **Compliance Methods**
+	- Adherence to voluntary codes of practice
+	- Compliance with harmonized standards (when available)
+	- Demonstration of alternative adequate means
+- **Systemic Risk**
+	- AI Office maintains public list of GPAI models with systemic risk
+	- Encourages codes of practice for risk management
 
 ---
 
-# Best Practices
+# Governance and Enforcement
 
-- Document all data sources, types, and flows.
-- Develop data rectification and erasure processes.
-- Ensure AI systems explain automated decisions.
-- Form cross-functional compliance teams.
-- Implement data version control and traceability.
-- Train staff on governance and compliance.
-- Deploy technical solutions like DLP.
-- Conduct periodic internal audits.
+- **Multi-level governance structure**
+	- European level: AI Office, AI Board, Advisory Forum
+	- National level: Market Surveillance Authorities
+- **Enforcement mechanisms**
+	- Significant fines for non-compliance
+	- Powers to access data and conduct audits
+	- Whistleblower protections
+
+Note:
+- **European AI Board**
+	- Comprises Member State representatives
+	- Advises on implementation and harmonization
+- **Advisory Forum**
+	- Includes industry, civil society, and academia
+	- Provides technical expertise and stakeholder input
+- **Fines**
+	- Up to €35 million or 7% of global turnover for prohibited practices
+	- Lower maximums for SMEs and startups
 
 ---
 
-# Practical Examples
+# Support for Innovation
 
-- **Fair Data Preprocessing**
-  - Example: Credit Scoring
-    - Remove protected attributes like gender and race
-    - Apply reweighing or prejudice remover algorithms
-- **Federated Learning**
-  - Example: Healthcare Models
-    - Train on decentralized data
-    - Aggregate updates without central collection
-- **Explainable AI**
-  - Example: Insurance Risk
-    - Use interpretable models or SHAP values
-    - Highlight feature importance and decisions
-- **Continuous Monitoring**
-  - Example: Fraud Detection
-    - Detect data drift
-    - Automate retraining with oversight
+- **AI Regulatory Sandboxes**
+	- Controlled testing environments
+	- Priority access for SMEs and startups
+- **Real World Testing**
+	- Limited scale testing of high-risk AI
+	- Subject to safeguards and time limits
+- **Codes of Conduct**
+	- Voluntary guidelines for non-high-risk AI
+	- Address issues like sustainability and accessibility
+
+Note:
+- **Sandboxes**
+	- At least one per Member State by August 2026
+	- Provide legal certainty and supervisory guidance
+- **Real World Testing**
+	- Maximum duration of 12 months (6 months + 6 months extension)
+	- Requires informed consent and risk monitoring
+- **AI Pact**
+	- Voluntary initiative for early implementation
+	- Includes knowledge sharing and best practices
+
+---
+
+# Implementation Timeline
+
+- **Key dates**
+	- August 2024: Entry into force
+	- February 2025: Prohibitions apply
+	- August 2026: Most provisions apply
+	- August 2027: Compliance for pre-existing GPAI models
+- **Gradual implementation**
+	- Allows time for adaptation and preparation
+	- Different deadlines for various aspects of the Act
+- Link to interactive timeline pending
+
+Note:
+- **2024-2025**
+	- Member States identify authorities
+	- Codes of practice developed
+- **2026**
+	- AI regulatory sandboxes operational
+	- Guidelines on high-risk classification available
+- **2027-2031**
+	- Periodic evaluations and reviews
+	- Deadline for public authority AI systems (2030)
 
 ---
 
 # Key Takeaways
 
-- Integrate data governance in AI/ML Lifecycle early.
-- Follow the GDPR and EU AI Act guidance for responsible data use.
-- Use a cross-functional approach combining legal, technical, and ethical aspects.
-- Prioritize continuous monitoring, auditing, and improvement in Data Governance practices.
+- **Comprehensive approach to AI regulation**
+	- Balances innovation with risk mitigation
+- **Risk-based framework**
+	- Tailored requirements based on AI system impact
+- **Emphasis on transparency and accountability**
+	- Right to explanation, public database for high-risk AI
+- **Support for innovation**
+	- Sandboxes, real-world testing, SME considerations
+- **Ongoing process**
+	- Gradual implementation, periodic reviews
+
+Note:
+- **Global impact**
+	- Potential to set global standards for AI regulation
+	- Considerations for international cooperation
+- **Challenges**
+	- Balancing innovation with strict requirements
+	- Adapting to rapidly evolving AI technologies
+- **Next steps for organizations**
+	- Assess AI systems against risk categories
+	- Prepare for compliance requirements
+	- Engage with regulatory sandboxes and AI Pact
 
 ---
 
