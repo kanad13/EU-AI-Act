@@ -1,0 +1,693 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EU AI Act Implementation Timeline</title>
+	<!-- External libraries -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		/* Global styles */
+		body,
+		html {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+
+		/* Timeline container */
+		#visualization {
+			width: 100%;
+			height: 70vh;
+			border: 1px solid #ddd;
+		}
+
+		/* Detail panel styles */
+		#detail-panel {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			width: 300px;
+			height: auto;
+			padding: 15px;
+			background-color: #e5e5e5;
+			border: 1px solid #000000;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+			font-size: 14px;
+			overflow-y: auto;
+			max-height: 250px;
+		}
+
+		#detail-panel h3 {
+			margin-top: 0;
+		}
+
+		/* Control panel styles */
+		.controls {
+			background-color: #f8f8f8;
+			padding: 10px;
+			border-bottom: 1px solid #ddd;
+		}
+
+		.controls button,
+		.controls select {
+			margin-right: 10px;
+			margin-bottom: 5px;
+		}
+
+		/* Legend styles */
+		.legend {
+			display: flex;
+			justify-content: center;
+			margin-top: 10px;
+		}
+
+		.legend-item {
+			margin: 0 10px;
+			display: flex;
+			align-items: center;
+		}
+
+		.legend-color {
+			width: 20px;
+			height: 20px;
+			margin-right: 5px;
+		}
+
+		/* Instruction panel styles */
+		.instructions {
+			padding: 10px;
+			background-color: #ffffff;
+			margin-bottom: 10px;
+		}
+
+		/* Utility class for hiding elements */
+		.hidden {
+			display: none;
+		}
+
+		/* Filter container styles */
+		#filter-container {
+			margin-top: 10px;
+			text-align: center;
+			background-color: #e5e5e5;
+		}
+
+		#event-filter {
+			font-size: 16px;
+			padding: 5px;
+		}
+
+		#filter-explanation {
+			margin-top: 10px;
+			font-style: italic;
+			color: #000000;
+		}
+
+		/* Hide default tooltip */
+		.vis-tooltip {
+			display: none;
+		}
+
+		.custom-tooltip {
+			background-color: #fff;
+			border: 1px solid #ddd;
+			padding: 5px;
+			font-size: 12px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Instructions panel -->
+	<div class="instructions">
+		<h2>EU AI Act Implementation Timeline</h2>
+		<p>This timeline shows key events in the implementation of the EU AI Act from 2024 to 2031.</p>
+		<p><b>How to use:</b></p>
+		<ul>
+			<li>Click an event to view its details in the top-right panel.</li>
+			<li>Use drop-down to filter events for specific category.</li>
+			<li>Use the mouse wheel to zoom in and out.</li>
+		</ul>
+		<p><b>Important note:</b></p>
+		<ul>
+			<li>This interactive timeline is only for educational purpose.</li>
+			<li>Refer <a href="https://artificialintelligenceact.eu/implementation-timeline/" target="_blank">EU's own
+					resources</a> for authoritative details.</li>
+			<li>Check <a href="https://github.com/kanad13/EU-AI-Act" target="_blank">this repo</a> for more resources about EU
+				AI Act</li>
+			<li><a href="https://www.kunal-pathak.com" target="_blank">Click here</a> to know more about the author of this
+				interactive timeline page.</li>
+		</ul>
+	</div>
+
+	<!-- Filter container -->
+	<div id="filter-container">
+		<select id="event-filter">
+			<option value="all">All Events</option>
+			<option value="important">Important Events</option>
+			<option value="application">Application</option>
+			<option value="commission">Commission</option>
+			<option value="member-states">Member States</option>
+			<option value="providers">Providers</option>
+			<option value="operators">Operators</option>
+		</select>
+		<div id="filter-explanation"></div>
+	</div>
+
+	<!-- Control panel -->
+	<div class="controls">
+		<button id="zoomIn">Zoom In</button>
+		<button id="zoomOut">Zoom Out</button>
+		<button id="moveLeft">Move Left</button>
+		<button id="moveRight">Move Right</button>
+		<button id="resetView">Reset View</button>
+		<button id="toggleControls">Hide Controls</button>
+		<select id="year-jump">
+			<option value="">Jump to Year...</option>
+		</select>
+	</div>
+
+	<!-- Timeline visualization container -->
+	<div id="visualization"></div>
+
+	<!-- Detail panel for displaying event information -->
+	<div id="detail-panel">
+		<h3>Event Details</h3>
+		<p>Select an event to view details.</p>
+	</div>
+
+	<!-- Legend for color coding -->
+	<div class="legend">
+		<div class="legend-item">
+			<div class="legend-color" style="background-color: #4285f4;"></div>
+			<span>Application</span>
+		</div>
+		<div class="legend-item">
+			<div class="legend-color" style="background-color: #ea4335;"></div>
+			<span>Commission</span>
+		</div>
+		<div class="legend-item">
+			<div class="legend-color" style="background-color: #fbbc05;"></div>
+			<span>Member States</span>
+		</div>
+		<div class="legend-item">
+			<div class="legend-color" style="background-color: #34a853;"></div>
+			<span>Providers</span>
+		</div>
+		<div class="legend-item">
+			<div class="legend-color" style="background-color: #673ab7;"></div>
+			<span>Operators</span>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		// Create a DataSet with timeline items
+		var items = new vis.DataSet([
+			{
+				id: 1,
+				content: 'AI Act published',
+				start: '2024-07-12',
+				group: 'application',
+				title: '12 July 2024: The AI Act is published in the Official Journal of the European Union. This serves as the formal notification of the new law.',
+				isImportant: true,
+				details: 'Article 113',
+				link: 'https://artificialintelligenceact.eu/article/113/'
+			},
+			{
+				id: 2,
+				content: 'AI Act enters into force',
+				start: '2024-08-01',
+				group: 'application',
+				title: '1 August 2024: Application: Date of entry into force of the AI Act. At this stage, none of the Act\'s requirements apply—they will begin to apply gradually over time.',
+				isImportant: true,
+				details: 'Article 113',
+				link: 'https://artificialintelligenceact.eu/article/113/'
+			},
+			{
+				id: 3,
+				content: 'Member States identify authorities',
+				start: '2024-11-02',
+				group: 'member-states',
+				title: '2 November 2024: Member States: Deadline for Member States to identify and publicly list the authorities / bodies responsible for fundamental rights protection, and to notify the Commission and other Member States.',
+				details: 'Article 77(2)',
+				link: 'https://artificialintelligenceact.eu/article/77/'
+			},
+			{
+				id: 4,
+				content: 'Prohibitions apply',
+				start: '2025-02-02',
+				group: 'application',
+				title: '2 February 2025: Application: Prohibitions on certain AI systems start to apply (Chapter 1 and Chapter 2).',
+				isImportant: true,
+				details: 'Article 113(a), Recital 179',
+				link: 'https://artificialintelligenceact.eu/article/113/'
+			},
+			{
+				id: 5,
+				content: 'Codes of practice ready',
+				start: '2025-05-02',
+				group: 'commission',
+				title: '2 May 2025: Commission: Codes of practice shall be ready by this date.',
+				details: 'Article 56(9), Recital 179',
+				link: 'https://artificialintelligenceact.eu/article/56/'
+			},
+			{
+				id: 6,
+				content: 'More rules apply',
+				start: '2025-08-02',
+				group: 'application',
+				title: '2 August 2025: Application: The following rules start to apply: Notified bodies (Chapter III, Section 4), GPAI models (Chapter V), Governance (Chapter VII), Confidentiality (Article 78), Penalties (Articles 99 and 100)',
+				details: 'Article 113(b)',
+				link: 'https://artificialintelligenceact.eu/article/113/'
+			},
+			{
+				id: 7,
+				content: 'GPAI model compliance deadline',
+				start: '2025-08-02',
+				group: 'providers',
+				title: '2 August 2025: Providers: Providers of GPAI models that have been placed on the market / put into service before this date need to be compliant with the AI Act by August 2, 2027.',
+				details: 'Article 111(3)',
+				link: 'https://artificialintelligenceact.eu/article/111/'
+			},
+			{
+				id: 8,
+				content: 'Member States report on resources',
+				start: '2025-08-02',
+				group: 'member-states',
+				title: '2 August 2025: Member States: Deadline for Member States to report to the Commission on the status of the financial and human resources of the national competent authorities. This report is required every two years thereafter.',
+				details: 'Article 70(6)',
+				link: 'https://artificialintelligenceact.eu/article/70/'
+			},
+			{
+				id: 9,
+				content: 'Member States designate authorities',
+				start: '2025-08-02',
+				group: 'member-states',
+				title: '2 August 2025: Member States: Deadline for Member States to designate national competent authorities (notifying authorities and market surveillance authorities), communicate them to the Commission, and make their contact details publicly available.',
+				details: 'Article 70(2)',
+				link: 'https://artificialintelligenceact.eu/article/70/'
+			},
+			{
+				id: 10,
+				content: 'Member States lay down rules for penalties',
+				start: '2025-08-02',
+				group: 'member-states',
+				title: '2 August 2025: Member States: Deadline for Member States to lay down rules for penalties and fines, notify them to the Commission, and ensure that they are properly implemented.',
+				details: 'Recital 179',
+				link: 'https://artificialintelligenceact.eu/recital/179/'
+			},
+			{
+				id: 11,
+				content: 'Commission review on prohibitions',
+				start: '2025-08-02',
+				group: 'commission',
+				title: '2 August 2025: Commission: Deadline for annual Commission review and possible amendments on prohibitions. This review is required every year thereafter.',
+				details: 'Article 112(1)',
+				link: 'https://artificialintelligenceact.eu/article/112/'
+			},
+			{
+				id: 12,
+				content: 'Commission provides guidelines',
+				start: '2026-02-02',
+				group: 'commission',
+				title: '2 February 2026: Commission: Deadline for Commission to provide guidelines specifying the practical implementation of Article 6, including post-market monitoring plan.',
+				details: 'Articles 6(5), 72(3)',
+				link: 'https://artificialintelligenceact.eu/article/6/'
+			},
+			{
+				id: 13,
+				content: 'Remainder of AI Act applies',
+				start: '2026-08-02',
+				group: 'application',
+				title: '2 August 2026: Application: The remainder of the AI Act starts to apply, except Article 6(1).',
+				isImportant: true,
+				details: 'Article 113',
+				link: 'https://artificialintelligenceact.eu/article/113/'
+			},
+			{
+				id: 14,
+				content: 'Member States establish AI sandboxes',
+				start: '2026-08-02',
+				group: 'member-states',
+				title: '2 August 2026: Member States: Member States shall ensure that their competent authorities have established at least one AI regulatory sandbox at national level. It should be operational by this date.',
+				details: 'Article 57(1)',
+				link: 'https://artificialintelligenceact.eu/article/57/'
+			},
+			{
+				id: 15,
+				content: 'Article 6(1) applies',
+				start: '2027-08-02',
+				group: 'application',
+				title: '2 August 2027: Application: Article 6(1) and the corresponding obligations in the Regulation start to apply.',
+				isImportant: true,
+				details: 'Article 113',
+				link: 'https://artificialintelligenceact.eu/article/113/'
+			},
+			{
+				id: 16,
+				content: 'GPAI models full compliance',
+				start: '2027-08-02',
+				group: 'providers',
+				title: '2 August 2027: Providers: Providers of GPAI models placed on the market before August 2, 2025 must have taken the necessary steps to comply with the obligations laid down in this Regulation by this date.',
+				details: 'Article 111(3)',
+				link: 'https://artificialintelligenceact.eu/article/111/'
+			},
+			{
+				id: 17,
+				content: 'Commission evaluates AI Office',
+				start: '2028-08-02',
+				group: 'commission',
+				title: '2 August 2028: Commission: Commission shall evaluate the functioning of the AI Office.',
+				details: 'Article 112(5)',
+				link: 'https://artificialintelligenceact.eu/article/112/'
+			},
+			{
+				id: 18,
+				content: 'Commission evaluates codes of conduct',
+				start: '2028-08-02',
+				group: 'commission',
+				title: '2 August 2028: Commission: Commission shall evaluate the impact and effectiveness of voluntary codes of conduct. This evaluation is required every three years thereafter.',
+				details: 'Article 112(7), Recital 174',
+				link: 'https://artificialintelligenceact.eu/article/112/'
+			},
+			{
+				id: 19,
+				content: 'Commission reports on amendments',
+				start: '2028-08-02',
+				group: 'commission',
+				title: '2 August 2028: Commission: Commission shall evaluate and report to the European Parliament and to the Council on the need for amendments to: Area headings in Annex III, List of AI systems requiring additional transparency measures in Article 50, The supervision and governance system. This report is required every four years thereafter.',
+				details: 'Article 112(2), Recital 174',
+				link: 'https://artificialintelligenceact.eu/article/112/'
+			},
+			{
+				id: 20,
+				content: 'Commission submits progress report',
+				start: '2028-08-02',
+				group: 'commission',
+				title: '2 August 2028: Commission: Commission shall submit a progress report on \'standardisation deliverables\' which cover the topic of energy-efficient development of general-purpose AI models. This report must be submitted to the European Parliament and Council, and made public. This report is required every four years thereafter.',
+				details: 'Article 112(6), Recital 174',
+				link: 'https://artificialintelligenceact.eu/article/112/'
+			},
+			{
+				id: 21,
+				content: 'Commission reports on delegation of power',
+				start: '2028-12-01',
+				group: 'commission',
+				title: '1 December 2028: Commission: Commission must draw up a report on the delegation of power outlined in Article 97.',
+				details: 'Article 97(2)',
+				link: 'https://artificialintelligenceact.eu/article/97/'
+			},
+			{
+				id: 22,
+				content: 'Commission\'s power to adopt delegated acts expires',
+				start: '2029-08-01',
+				group: 'commission',
+				title: '1 August 2029: Commission: The Commission\'s power to adopt delegated acts referred to in various articles expires—unless this period is extended. The delegation of power will, by default, be extended for recurring 5-year periods unless the European Parliament or the Council opposes such extension three months or more before the end of each period.',
+				details: 'Article 97(2)',
+				link: 'https://artificialintelligenceact.eu/article/97/'
+			},
+			{
+				id: 23,
+				content: 'Commission submits evaluation report',
+				start: '2029-08-02',
+				group: 'commission',
+				title: '2 August 2029: Commission: Commission shall submit a report on the evaluation and review of this Regulation to the European Parliament and to the Council. This report is required every four years thereafter.',
+				details: 'Article 112(3), Recital 174',
+				link: 'https://artificialintelligenceact.eu/article/112/'
+			},
+			{
+				id: 24,
+				content: 'Public authorities compliance deadline',
+				start: '2030-08-02',
+				group: 'operators',
+				title: '2 August 2030: Providers & Deployers: Providers and deployers of high-risk AI systems intended to be used by public authorities must have taken the necessary steps to comply with the requirements and obligations of this Regulation by this date.',
+				isImportant: true,
+				details: 'Article 111(2)',
+				link: 'https://artificialintelligenceact.eu/article/111/'
+			},
+			{
+				id: 25,
+				content: 'Large-scale IT systems compliance',
+				start: '2030-12-31',
+				group: 'operators',
+				title: '31 December 2030: Large-scale IT Systems: Deadline for AI systems which are components of the large-scale IT systems listed in Annex X and that were placed on the market or put into service before August 2, 2027 to be brought into compliance with this Regulation.',
+				details: 'Article 111(1)',
+				link: 'https://artificialintelligenceact.eu/article/111/'
+			},
+			{
+				id: 26,
+				content: 'Commission assessment',
+				start: '2031-08-02',
+				group: 'commission',
+				title: '2 August 2031: Commission: Commission shall carry out an assessment of the enforcement of this Regulation and shall report on it to the European Parliament, the Council and the European Economic and Social Committee.',
+				details: 'Article 112(13)',
+				link: 'https://artificialintelligenceact.eu/article/112/'
+			}
+		]);
+
+
+		// Configuration options for the Timeline
+		var options = {
+			start: new Date('2024-01-01'),
+			end: new Date('2032-01-01'),
+			min: new Date('2023-07-01'),
+			max: new Date('2032-06-30'),
+			zoomMin: 1000 * 60 * 60 * 24 * 30, // Minimum zoom: 30 days
+			zoomMax: 1000 * 60 * 60 * 24 * 365 * 10, // Maximum zoom: 10 years
+			stack: true,
+			stackSubgroups: true,
+			showCurrentTime: true,
+			verticalScroll: true,
+			height: '70vh',
+			margin: {
+				item: 20,
+				axis: 40
+			},
+			orientation: 'top',
+			groupOrder: 'content'
+		};
+
+		// Create the Timeline
+		var container = document.getElementById('visualization');
+		var timeline = new vis.Timeline(container, items, options);
+
+		/**
+		 * Move the timeline window by a percentage of its current range
+		 * @param {number} percentage - Percentage to move (positive: left, negative: right)
+		 */
+		function move(percentage) {
+			var range = timeline.getWindow();
+			var interval = range.end - range.start;
+
+			timeline.setWindow({
+				start: range.start.valueOf() - interval * percentage,
+				end: range.end.valueOf() - interval * percentage
+			});
+		}
+
+		// Event listeners for navigation buttons
+		document.getElementById('zoomIn').onclick = function () { timeline.zoomIn(0.2); };
+		document.getElementById('zoomOut').onclick = function () { timeline.zoomOut(0.2); };
+		document.getElementById('moveLeft').onclick = function () { move(0.2); };
+		document.getElementById('moveRight').onclick = function () { move(-0.2); };
+		document.getElementById('resetView').onclick = function () {
+			timeline.setWindow(new Date('2024-01-01'), new Date('2032-01-01'));
+		};
+
+		/**
+		 * Toggle visibility of the control panel
+		 */
+		document.getElementById('toggleControls').onclick = function () {
+			var controls = document.querySelector('.controls');
+			var button = document.getElementById('toggleControls');
+			if (controls.classList.contains('hidden')) {
+				controls.classList.remove('hidden');
+				button.textContent = 'Hide Controls';
+			} else {
+				controls.classList.add('hidden');
+				button.textContent = 'Show Controls';
+			}
+		};
+
+		// Populate year jump dropdown
+		var yearJump = document.getElementById('year-jump');
+		for (var year = 2024; year <= 2031; year++) {
+			var option = document.createElement('option');
+			option.value = year;
+			option.textContent = year;
+			yearJump.appendChild(option);
+		}
+
+		// Event listener for year jump
+		yearJump.onchange = function () {
+			if (this.value) {
+				timeline.moveTo(new Date(this.value, 0, 1));
+			}
+		};
+
+		/**
+		 * Update the detail panel with information about the selected event
+		 * @param {Object} properties - Properties of the selected item
+		 */
+		function updateDetailPanel(properties) {
+			var detailPanel = document.getElementById('detail-panel');
+			if (properties.item) {
+				var item = items.get(properties.item);
+				var content = '<h3>' + item.content + '</h3>';
+				content += '<p>' + item.title + '</p>';
+				if (item.details) {
+					content += '<p><strong>Details:</strong> ' + item.details + '</p>';
+				}
+				if (item.link) {
+					content += '<p><strong>Related Content:</strong> <a href="' + item.link + '" target="_blank">Link</a></p>';
+				}
+				detailPanel.innerHTML = content;
+			} else {
+				detailPanel.innerHTML = '<h3>Event Details</h3><p>Select an event to view details.</p>';
+			}
+		}
+
+		// Event listener for item click
+		timeline.on('click', updateDetailPanel);
+
+		/**
+		 * Set styles for timeline items based on their group
+		 */
+		function setItemStyles() {
+			var itemsData = items.get();
+			itemsData.forEach(function (item) {
+				item.group = item.group || 'other';
+				switch (item.group) {
+					case 'application':
+						item.style = 'background-color: #4285f4; color: white;';
+						break;
+					case 'commission':
+						item.style = 'background-color: #ea4335; color: white;';
+						break;
+					case 'member-states':
+						item.style = 'background-color: #fbbc05; color: black;';
+						break;
+					case 'providers':
+						item.style = 'background-color: #34a853; color: white;';
+						break;
+					case 'operators':
+						item.style = 'background-color: #673ab7; color: white;';
+						break;
+					default:
+						item.style = 'background-color: #9e9e9e; color: white;';
+				}
+			});
+			items.update(itemsData);
+		}
+
+		// Event listener for filter changes
+		document.getElementById('event-filter').onchange = function () {
+			var filterValue = this.value;
+			filterEvents(filterValue);
+			updateFilterExplanation(filterValue);
+		};
+
+		/**
+		 * Filter events based on the selected group
+		 * @param {string} group - The group to filter by
+		 */
+		function filterEvents(group) {
+			if (group === 'all') {
+				timeline.setItems(items);
+			} else if (group === 'important') {
+				var filteredItems = new vis.DataSet(items.get({
+					filter: function (item) {
+						return item.isImportant === true;
+					}
+				}));
+				timeline.setItems(filteredItems);
+			} else {
+				var filteredItems = new vis.DataSet(items.get({
+					filter: function (item) {
+						return item.group === group;
+					}
+				}));
+				timeline.setItems(filteredItems);
+			}
+		}
+
+		/**
+		 * Update the explanation text for the current filter
+		 * @param {string} filterValue - The current filter value
+		 */
+		function updateFilterExplanation(filterValue) {
+			var explanationElement = document.getElementById('filter-explanation');
+			var explanations = {
+				'important': 'Showing only the most significant events in the AI Act implementation timeline.',
+				'all': 'Displaying all events related to the AI Act implementation.',
+				'application': 'Showing events related to the application and enforcement of the AI Act.',
+				'commission': 'Displaying actions and deadlines for the European Commission.',
+				'member-states': 'Showing responsibilities and deadlines for EU Member States.',
+				'providers': 'Displaying events relevant to AI system providers.',
+				'operators': 'Showing deadlines and requirements for AI system operators.'
+			};
+			explanationElement.textContent = explanations[filterValue] || '';
+		}
+
+		// Set item styles initially
+		setItemStyles();
+
+		// Add a red vertical line for today's date
+		var today = new Date();
+		timeline.addCustomTime(today, 'current');
+		timeline.setCustomTimeTitle('Today: ' + today.toDateString(), 'current');
+
+		// Ensure the timeline is properly sized when the window is resized
+		window.addEventListener('resize', function () {
+			timeline.redraw();
+		});
+
+		// Show all events by default
+		filterEvents('all');
+		updateFilterExplanation('all');
+
+		/**
+						 * Display a simple tooltip when hovering over an item
+						 */
+		timeline.on('itemover', function (properties) {
+			var tooltip = document.createElement('div');
+			tooltip.className = 'custom-tooltip'; // Use a different class
+			tooltip.innerHTML = 'Click here to view details';
+			document.body.appendChild(tooltip);
+
+			// Position the tooltip near the mouse
+			tooltip.style.position = 'absolute';
+			tooltip.style.left = properties.event.pageX + 5 + 'px';
+			tooltip.style.top = properties.event.pageY + 5 + 'px';
+			tooltip.style.display = 'block';
+
+			// Remove the tooltip when the mouse leaves the item
+			timeline.on('itemout', function () {
+				if (tooltip && tooltip.parentNode) {
+					tooltip.parentNode.removeChild(tooltip);
+				}
+			});
+		});
+
+		/**
+		 * Initialize the timeline with all events
+		 */
+		function initializeTimeline() {
+			var eventFilter = document.getElementById('event-filter');
+			eventFilter.value = 'all';
+			filterEvents('all');
+			updateFilterExplanation('all');
+		}
+
+		// Call the initialization function when the page loads
+		window.onload = initializeTimeline;
+
+	</script>
+</body>
+
+</html>
