@@ -21,7 +21,12 @@ It helps individuals and organizations understand the impact of this Act on AI d
      - Potential impacts on companies and individuals
    - [Link to the presentation](https://kanad13.github.io/EU-AI-Act/decks/EU_AI_Act-in_2_mins.html)
 
-3. **Practical Guide to EU AI Act**
+3. **EU AI Act Timelines**
+
+   - An interactive timeline to visualize the implementation dates of the EU AI Act:
+     - [Click here](https://kanad13.github.io/EU-AI-Act/decks/EU_AI_Act-timelines.html)
+
+4. **Practical Guide to EU AI Act**
 
    - Handy guide for the EU AI Act with practical steps & relevant examples
    - [Link to the document](https://github.com/kanad13/EU-AI-Act/blob/main/decks/EU_AI_Act.md)
