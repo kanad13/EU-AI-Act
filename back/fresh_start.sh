@@ -11,7 +11,7 @@ if [ ! -d "$destination_folder" ]; then
 fi
 
 # Execute the copy command
-cp -R "$source_folder/.gitignore" "$source_folder/readme.md" "$source_folder/assets" "$source_folder/back" "$source_folder/decks" "$source_folder/Welcome.py" "$source_folder/requirements.txt" "$source_folder/pages" "$destination_folder/"
+cp -R "$source_folder/.gitignore" "$source_folder/readme.md" "$source_folder/assets" "$source_folder/back" "$source_folder/decks" "$destination_folder/"
 
 echo "Copy completed."
 
@@ -37,20 +37,20 @@ npm install
 cd ..
 
 # Create and activate virtual environment
-echo "Creating and activating virtual environment..."
-python3 -m venv eu_ai_act_venv
-source eu_ai_act_venv/bin/activate
+# echo "Creating and activating virtual environment..."
+# python3 -m venv eu_ai_act_venv
+# source eu_ai_act_venv/bin/activate
 
 # Install dependencies
-echo "Installing dependencies..."
-pip3 install -r requirements.txt
+# echo "Installing dependencies..."
+# pip3 install -r requirements.txt
 
 # Add and commit changes
 echo "Adding and committing changes..."
 git add .
 git commit -m "Forking from my private repo"
 
-echo "Launching presentation..."
+# echo "Launching presentation..."
 #cd reveal.js && npm start
 
 echo "Setup completed in the destination folder."

@@ -5,7 +5,7 @@
 - **Resources**
   - `About EU AI Act`
     - Quick introduction to the EU AI Act in 2 mins - <a href="https://kanad13.github.io/EU-AI-Act/decks/eu_ai_act-in_2_mins.html" target="_blank" rel="noopener noreferrer">Slides here</a>
-    - Iterative timeline for the EU AI Act - <a href="https://kanad13.github.io/EU-AI-Act/decks/EU_AI_Act-timelines.html" target="_blank" rel="noopener noreferrer">Click here</a>
+    - Interactive timeline for the EU AI Act - <a href="https://kanad13.github.io/EU-AI-Act/decks/EU_AI_Act-timelines.html" target="_blank" rel="noopener noreferrer">Click here</a>
     - Practical Guide to EU AI Act - <a href="https://github.com/kanad13/EU-AI-Act/blob/main/decks/EU_AI_Act.md" target="_blank" rel="noopener noreferrer">Read here</a>
   - `GDPR + AI Acts`
     - Data Governance for AI/ML activities - <a href="https://kanad13.github.io/EU-AI-Act/decks/data-governance.html" target="_blank" rel="noopener noreferrer">Learn More</a>

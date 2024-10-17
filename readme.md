@@ -19,7 +19,7 @@ It helps individuals and organizations understand the impact of this Act on AI d
      - Key points of the legislation
      - Implementation timelines
      - Potential impacts on companies and individuals
-   - [Link to the presentation](https://kanad13.github.io/EU-AI-Act/decks/EU_AI_Act-in_2_mins.html)
+   - [Link to the presentation](https://kanad13.github.io/EU-AI-Act/decks/eu_ai_act-in_2_mins.html)
 
 3. **EU AI Act Timelines**
 
@@ -58,6 +58,23 @@ This repository aims to provide clear, accessible information about the EU AI Ac
 - This information is for educational purposes only and should not be considered as legal advice.
 - For the most accurate and up-to-date information, please refer to official EU resources.
 - I am not afflicted in any way to the European Union. I am presenting this information as an individual interested in the topic.
-- No copyright infringement is intended. All legal rights belong to the EU. The material used in this presentation is for educational purposes and falls under fair use.
+- No copyright infringement is intended. All legal rights belong to the EU and other entities whose material I have used to prepare this content. See the next section for a full list of sources.
+- The material used in this presentation is for educational purposes and falls under fair use.
 - I bear no legal responsibility for any actions taken based on the information provided in this presentation.
 - Companies and individuals should conduct their own research and consult with qualified legal experts before implementing any compliance measures.
+
+## Sources
+
+- I used the following sources in creating the presentations and other artefacts in this repository
+- **EU AI Act**
+  - Full text of EU AI Act - [link](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
+  - Up-to-date developments and analyses of the EU AI Act - [link](https://artificialintelligenceact.eu)
+  - Inputs from the European Parliament Think Tank - [link](<https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI(2021)698792>)
+  - High level summary of the EU AI Act - [link](https://artificialintelligenceact.eu/high-level-summary/)
+  - Press FAQ for the EU AI Act - [link](https://ec.europa.eu/commission/presscorner/detail/en/QANDA_21_1683)
+  - AI Act Explorer - [link](https://artificialintelligenceact.eu/ai-act-explorer/)
+  - EU AI Act Compliance Checker - [link](https://artificialintelligenceact.eu/assessment/eu-ai-act-compliance-checker/)
+  - AI Pact [link](https://digital-strategy.ec.europa.eu/en/policies/ai-pact)
+- **GDPR**
+  - Full text of GDPR - [link](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&qid=1728819809662)
+  - GDPR summary - [link](https://eur-lex.europa.eu/EN/legal-content/summary/general-data-protection-regulation-gdpr.html)
