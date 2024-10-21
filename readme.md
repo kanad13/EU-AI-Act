@@ -4,6 +4,8 @@ This repository provides guidance and resources about the European Union Artific
 
 It helps individuals and organizations understand the impact of this Act on AI development and deployment in the EU.
 
+The content in this repository includes material from official European Union publications, which is subject to the following copyright notice: © European Union, 1995-2024
+
 ## Contents
 
 1. **EU AI Act's Impact on Data Governance**
@@ -51,6 +53,7 @@ This repository aims to provide clear, accessible information about the EU AI Ac
 
 - I would like to express my gratitude to the European Union for their work on the GDPR, AI & other related legislation, which aim to ensure the safe and ethical development of AI technologies.
 - The information is maintained in this repository with the intention of promoting awareness and understanding of these Acts among interested individuals and organizations.
+- This repository includes content from official EU publications related to the GDPR & AI Act. This content is used for educational purposes under the EU's reuse policy, as detailed in the "Copyright and Reuse" section below.
 
 ## Disclaimer
 

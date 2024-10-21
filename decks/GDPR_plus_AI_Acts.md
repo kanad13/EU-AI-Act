@@ -5,6 +5,8 @@
 - **GDPR**: Applies to any organization processing personal data of EU residents, regardless of location. (Article 3)
 - **AI Act**: Applies to AI systems used in the EU, regardless of the provider's location (Article 2).
 
+The content in this page includes material from official European Union publications, which is subject to the following copyright notice: © European Union, 1995-2024
+
 ## Rights of Individuals
 
 - **GDPR Foundations**
@@ -215,18 +217,19 @@
     - self-assessment guide [link](https://www.cnil.fr/en/self-assessment-guide-artificial-intelligence-ai-systems)
   - AI & GDPR - [legamart](https://legamart.com/articles/ai-and-gdpr/)
 
-# Acknowledgments
+## Acknowledgments
 
-- I would like to express my gratitude to the European Union for their work on the GDPR & AI Acts.
-- This document is created with the intention of promoting awareness and understanding of the Acts among interested individuals and organizations.
+- I would like to express my gratitude to the European Union for their work on the GDPR, AI & other related legislation, which aim to ensure the safe and ethical development of AI technologies.
+- The information is maintained in this repository with the intention of promoting awareness and understanding of these Acts among interested individuals and organizations.
+- This repository includes content from official EU publications related to the GDPR & AI Act. This content is used for educational purposes under the EU's reuse policy, as detailed in the "Copyright and Reuse" section below.
 
-# Disclaimer
+## Disclaimer
 
-- By reading this document, you acknowledge and agree to the terms of this disclaimer.
-  - The information presented in this document regarding the GDPR & EU AI Acts is based on my personal understanding and interpretation. These insights and recommendations are my own and do not represent the official stance of any company, organization, or the European Union.
-  - This document is for informational purposes only and should not be considered as legal advice.
-  - For the most accurate and up-to-date information, please refer to official EU resources.
-  - I am not afflicted in any way to the European Union. I am presenting this information as an individual interested in the topic.
-  - No copyright infringement is intended. All legal rights belong to the EU. The material used in this document is for educational purposes and falls under fair use.
-  - I bear no legal responsibility for any actions taken based on the information provided in this document.
-  - Companies and individuals should conduct their own research and consult with qualified legal experts before implementing any compliance measures.
+- The information in this repository regarding the GDPR & EU AI Acts is based on my personal understanding and interpretation. These insights and recommendations are my own and do not represent the official stance of any company, organization, or the European Union.
+- This information is for educational purposes only and should not be considered as legal advice.
+- For the most accurate and up-to-date information, please refer to official EU resources.
+- I am not afflicted in any way to the European Union. I am presenting this information as an individual interested in the topic.
+- No copyright infringement is intended. All legal rights belong to the EU and other entities whose material I have used to prepare this content. See the next section for a full list of sources.
+- The material used in this presentation is for educational purposes and falls under fair use.
+- I bear no legal responsibility for any actions taken based on the information provided in this presentation.
+- Companies and individuals should conduct their own research and consult with qualified legal experts before implementing any compliance measures.
