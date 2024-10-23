@@ -1,0 +1,47 @@
+<svg width="1862" height="797" viewBox="0 0 1862 797" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Slide 16:9 - 1" clip-path="url(#clip0_862_500)">
+<rect width="1862" height="797" fill="white"/>
+<g id="020-eu_ai_act-risk_pyramid 1" clip-path="url(#clip1_862_500)">
+<path id="Vector" d="M1372.45 212.41H1561.47C1563.32 212.408 1565.15 211.934 1566.77 211.031C1568.39 210.129 1569.75 208.829 1570.73 207.254C1571.71 205.679 1572.27 203.88 1572.36 202.028C1572.45 200.176 1572.06 198.332 1571.24 196.67L1476.73 6.05957C1475.82 4.24011 1474.43 2.70865 1472.71 1.63793C1470.98 0.56722 1468.99 -0.000137329 1466.96 -0.000137329C1464.93 -0.000137329 1462.94 0.56722 1461.22 1.63793C1459.49 2.70865 1458.1 4.24011 1457.2 6.05957L1362.68 196.67C1361.86 198.332 1361.48 200.176 1361.57 202.028C1361.66 203.88 1362.22 205.679 1363.2 207.254C1364.17 208.829 1365.54 210.129 1367.16 211.031C1368.78 211.934 1370.6 212.408 1372.45 212.41Z" fill="black"/>
+<path id="Vector_2" d="M1466.96 35.4369L1543.9 190.612H1390.02L1466.96 35.4369Z" fill="#0D47A1"/>
+<path id="Vector_3" d="M1267.85 407.348H1658.15C1660 407.347 1661.82 406.872 1663.44 405.97C1665.06 405.068 1666.43 403.768 1667.4 402.192C1668.38 400.616 1668.94 398.817 1669.03 396.965C1669.12 395.113 1668.73 393.269 1667.91 391.607L1592.09 238.679C1591.19 236.86 1589.8 235.329 1588.07 234.259C1586.35 233.189 1584.36 232.622 1582.33 232.622H1351.62C1349.59 232.622 1347.6 233.189 1345.88 234.259C1344.15 235.329 1342.76 236.86 1341.86 238.679L1266.05 391.607C1265.23 393.269 1264.84 395.113 1264.93 396.966C1265.02 398.819 1265.58 400.619 1266.55 402.196C1267.53 403.772 1268.9 405.073 1270.52 405.974C1272.14 406.876 1273.96 407.349 1275.82 407.348H1267.85Z" fill="black"/>
+<path id="Vector_4" d="M1350.42 254.42H1575.54L1640.58 385.55H1293.38L1350.42 254.42Z" fill="#1976D2"/>
+<path id="Vector_5" d="M1187.12 602.333H1762.79C1764.65 602.332 1766.47 601.858 1768.09 600.956C1769.71 600.054 1771.07 598.753 1772.05 597.177C1773.03 595.602 1773.59 593.803 1773.67 591.951C1773.76 590.098 1773.38 588.254 1772.55 586.593L1688.73 433.609C1687.83 431.79 1686.44 430.259 1684.72 429.189C1682.99 428.119 1681 427.552 1678.97 427.552H1254.96C1252.93 427.553 1250.94 428.121 1249.21 429.192C1247.48 430.264 1246.09 431.796 1245.19 433.617L1169.38 586.545C1168.56 588.207 1168.17 590.052 1168.26 591.904C1168.35 593.755 1168.91 595.554 1169.89 597.129C1170.87 598.704 1172.23 600.004 1173.85 600.907C1175.47 601.809 1177.3 602.283 1179.15 602.286L1187.12 602.333Z" fill="black"/>
+<path id="Vector_6" d="M1261.71 449.35H1672.21L1737.25 580.488H1196.72L1261.71 449.35Z" fill="#64B5F6"/>
+<path id="Vector_7" d="M1861.09 781.259L1785.41 628.594C1784.51 626.774 1783.12 625.242 1781.39 624.172C1779.67 623.101 1777.68 622.535 1775.65 622.537H1158.28C1156.25 622.535 1154.26 623.101 1152.53 624.172C1150.8 625.242 1149.41 626.774 1148.51 628.594L1072.84 781.259C1072.02 782.921 1071.63 784.765 1071.72 786.617C1071.81 788.469 1072.37 790.268 1073.34 791.844C1074.32 793.42 1075.68 794.72 1077.3 795.622C1078.92 796.525 1080.75 796.999 1082.6 797H1851.32C1853.18 796.999 1855 796.525 1856.62 795.622C1858.24 794.72 1859.6 793.42 1860.58 791.844C1861.56 790.268 1862.12 788.469 1862.2 786.617C1862.29 784.765 1861.91 782.921 1861.09 781.259Z" fill="black"/>
+<path id="Vector_8" d="M1108.14 775.202L1173.01 644.335H1768.89L1833.76 775.202H1108.14Z" fill="#E3F2FD"/>
+</g>
+<rect id="Rectangle 1" x="5" y="649.831" width="646.124" height="119.87" stroke="black" stroke-width="10"/>
+<path id="Arrow 1" d="M1098.54 713.531C1100.49 711.576 1100.49 708.411 1098.53 706.46L1066.69 674.664C1064.73 672.713 1061.57 672.715 1059.62 674.669C1057.67 676.623 1057.67 679.789 1059.62 681.74L1087.93 710.003L1059.67 738.309C1057.71 740.263 1057.72 743.429 1059.67 745.38C1061.63 747.331 1064.79 747.329 1066.74 745.374L1098.54 713.531ZM656.128 715.33L1095 714.998L1095 704.998L656.12 705.33L656.128 715.33Z" fill="black"/>
+<rect id="Rectangle 2" x="5" y="454" width="646.124" height="119.87" stroke="black" stroke-width="10"/>
+<path id="Arrow 2" d="M1200.54 517.546C1202.49 515.591 1202.49 512.426 1200.53 510.475L1168.68 478.684C1166.73 476.733 1163.56 476.736 1161.61 478.69C1159.66 480.644 1159.66 483.81 1161.62 485.761L1189.93 514.02L1161.67 542.33C1159.72 544.284 1159.72 547.45 1161.68 549.401C1163.63 551.351 1166.8 551.349 1168.75 549.394L1200.54 517.546ZM656.129 519.499L1197 519.013L1197 509.013L656.12 509.499L656.129 519.499Z" fill="black"/>
+<rect id="Rectangle 3" x="5" y="258" width="646.124" height="119.87" stroke="black" stroke-width="10"/>
+<path id="Arrow 3" d="M1296.54 321.484C1298.49 319.53 1298.49 316.364 1296.53 314.413L1264.69 282.621C1262.73 280.67 1259.57 280.673 1257.61 282.627C1255.66 284.581 1255.67 287.747 1257.62 289.698L1285.93 317.958L1257.67 346.267C1255.72 348.221 1255.72 351.387 1257.68 353.338C1259.63 355.289 1262.8 355.286 1264.75 353.331L1296.54 321.484ZM656.128 323.499L1293 322.952L1293 312.952L656.12 313.499L656.128 323.499Z" fill="black"/>
+<rect id="Rectangle 4" x="5" y="53" width="646.124" height="119.87" stroke="black" stroke-width="10"/>
+<path id="Arrow 4" d="M1393.54 116.477C1395.49 114.523 1395.49 111.357 1393.53 109.406L1361.69 77.6101C1359.73 75.6589 1356.57 75.6613 1354.62 77.6154C1352.67 79.5695 1352.67 82.7353 1354.62 84.6865L1382.93 112.949L1354.67 141.255C1352.71 143.209 1352.72 146.375 1354.67 148.326C1356.63 150.277 1359.79 150.275 1361.74 148.321L1393.54 116.477ZM656.128 118.499L1390 117.944L1390 107.944L656.12 108.499L656.128 118.499Z" fill="black"/>
+<g id="Unacceptable Risk AI systems that pose a clear threat to safety, human rights, etc. These are prohibited from use. Examples - Social scoring systems, AI for mass surveillance, etc.">
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="19" letter-spacing="0em"><tspan x="23" y="108.312">AI systems that pose a clear threat to safety, human rights, etc.&#10;</tspan><tspan x="23" y="131.312">These are prohibited from use.&#10;</tspan><tspan x="23" y="154.312">Examples - Social scoring systems, AI for mass surveillance, etc.&#10;</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="19" font-weight="bold" letter-spacing="0em"><tspan x="23" y="85.3115">Unacceptable Risk&#10;</tspan></text>
+</g>
+<g id="High Risk AI systems that impact safety or fundamental rights, etc. Examples - AI in hiring tools, medical diagnostics, etc.">
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="19" font-weight="bold" letter-spacing="0em"><tspan x="23" y="285.312">High Risk&#10;</tspan><tspan x="23" y="308.312">&#10;</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="19" letter-spacing="0em"><tspan x="23" y="331.312">AI systems that impact safety or fundamental rights, etc.&#10;</tspan><tspan x="23" y="354.312">Examples - AI in hiring tools, medical diagnostics, etc.</tspan></text>
+</g>
+<g id="Limited Risk AI systems requiring minimal transparency. Examples - Chatbots like ChatGPT.">
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="19" font-weight="bold" letter-spacing="0em"><tspan x="23" y="486.312">Limited Risk&#10;</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="19" letter-spacing="0em"><tspan x="23" y="509.312">&#10;</tspan><tspan x="23" y="532.312">AI systems requiring minimal transparency.&#10;</tspan><tspan x="23" y="555.312">Examples - Chatbots like ChatGPT.</tspan></text>
+</g>
+<g id="Minimal or No Risk Common AI applications posing minimal risk, requiring no regulatory oversight. Examples - Spam filters, AI in video games, etc.">
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="19" font-weight="bold" letter-spacing="0em"><tspan x="23" y="682.312">Minimal or No Risk&#10;</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="19" letter-spacing="0em"><tspan x="23" y="705.312">Common AI applications posing minimal risk, requiring no </tspan><tspan x="23" y="728.312">regulatory oversight.&#10;</tspan><tspan x="23" y="751.312">Examples - Spam filters, AI in video games, etc.</tspan></text>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_862_500">
+<rect width="1862" height="797" fill="white"/>
+</clipPath>
+<clipPath id="clip1_862_500">
+<rect width="790.511" height="797" fill="white" transform="translate(1071.71)"/>
+</clipPath>
+</defs>
+</svg>
