@@ -1,0 +1,39 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/ubuntu
+{
+	"name": "javascript",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/javascript-node",
+	//"image": "tensorflow/tensorflow:latest",
+	// https://github.com/devcontainers/images/tree/main/src/python
+
+	//https://code.visualstudio.com/remote/advancedcontainers/add-local-file-mount
+	//"mounts": [
+	//	"source=${localEnv:HOME}/Downloads,target=/workspaces/documentation/zocal_folder,type=bind,consistency=cached"
+	//],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	"forwardPorts": [5000],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+	//"postCreateCommand": "mkdir -p /home/vscode/.local/state/mume/",
+	//"postAttachCommand": "cp -fr misc/present/md-preview-enhanced/style.less /home/vscode/.local/state/mume/",
+	//"postStartCommand": "git config --global user.email 'kunalpathak13@gmail.com'",
+	//"postStartCommand": "bash ./.devcontainer/postStart.sh",
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	//"remoteUser": "vscode",
+	"containerEnv": {
+		"TZ": "Europe/Berlin"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode-remote.remote-containers",
+				"dbaeumer.vscode-eslint"
+			]
+		}
+	}
+}
