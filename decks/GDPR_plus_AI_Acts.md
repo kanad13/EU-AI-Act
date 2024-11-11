@@ -223,13 +223,13 @@ The content in this page includes material from official European Union publicat
 - The information is maintained in this repository with the intention of promoting awareness and understanding of these Acts among interested individuals and organizations.
 - This repository includes content from official EU publications related to the GDPR & AI Act. This content is used for educational purposes under the EU's reuse policy, as detailed in the "Copyright and Reuse" section below.
 
-## Disclaimer
+## Important Note
 
-- The information in this repository regarding the GDPR & EU AI Acts is based on my personal understanding and interpretation. These insights and recommendations are my own and do not represent the official stance of any company, organization, or the European Union.
-- This information is for educational purposes only and should not be considered as legal advice.
+- The content in this repository includes material from official European Union publications, which is subject to the following copyright notice: © European Union, 1995-2024
+- The information presented in this presentation regarding the GDPR & EU AI Acts is based on my personal understanding and interpretation. These insights and recommendations are my own and do not represent the official stance of any company, organization, or the European Union.
+- This presentation is for informational purposes only and should not be considered as legal advice.
 - For the most accurate and up-to-date information, please refer to official EU resources.
 - I am not afflicted in any way to the European Union. I am presenting this information as an individual interested in the topic.
-- No copyright infringement is intended. All legal rights belong to the EU and other entities whose material I have used to prepare this content. See the next section for a full list of sources.
-- The material used in this presentation is for educational purposes and falls under fair use.
+- No copyright infringement is intended. All legal rights belong to the EU. The material used in this presentation is for educational purposes and falls under fair use.
 - I bear no legal responsibility for any actions taken based on the information provided in this presentation.
-- Companies and individuals should conduct their own research and consult with qualified legal experts before implementing any compliance measures.
+- Companies and individuals should conduct their own research and consult with qualified legal & technical experts before implementing any compliance measures.

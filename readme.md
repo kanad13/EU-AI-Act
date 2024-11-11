@@ -21,17 +21,17 @@ The content in this repository includes material from official European Union pu
      - Key points of the legislation
      - Implementation timelines
      - Potential impacts on companies and individuals
-   - [Link to the presentation](https://kanad13.github.io/EU-AI-Act/decks/eu_ai_act-in_2_mins.html)
+   - [Link to the presentation](https://pdflink.to/eu-ai-act-kunal-pathak/)
 
-3. **EU AI Act Timelines**
+3. **Practical Guide to EU AI Act**
+
+- Handy guide for the EU AI Act with practical steps & relevant examples
+- [Link to the document](https://github.com/kanad13/EU-AI-Act/blob/main/decks/EU_AI_Act.md)
+
+4. **EU AI Act Timelines**
 
    - An interactive timeline to visualize the implementation dates of the EU AI Act:
      - [Click here](https://kanad13.github.io/EU-AI-Act/decks/EU_AI_Act-timelines.html)
-
-4. **Practical Guide to EU AI Act**
-
-   - Handy guide for the EU AI Act with practical steps & relevant examples
-   - [Link to the document](https://github.com/kanad13/EU-AI-Act/blob/main/decks/EU_AI_Act.md)
 
 ## Purpose
 
