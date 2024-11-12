@@ -43,6 +43,8 @@
 
 Author - <u><a href="https://www.kunal-pathak.com" target="_blank" rel="noopener noreferrer">Kunal Pathak</a></u>
 
+© European Union, 1995-2024
+
 ---
 
 # Agenda
@@ -55,259 +57,207 @@ Note:
 
 ---
 
-# Agenda
-
-- Summarize GDPR and EU AI Act regulatory requirements.
-- Discuss their impact on data governance of AI/ML systems.
-- Provide practical guidance for responsible data handling in AI/ML Lifecycle.
+# Overview of the EU AI Act
 
 ---
 
-# Overview
+## Key Features of EU AI Act
 
-| Aspect | GDPR | EU AI Act |
-| --------------- | ---------------------------------------------- | ---------------------------------------------- |
-| Focus | Personal data protection and privacy | Governance of AI systems |
-| Scope | All personal data processing | AI systems, especially high-risk ones |
-| Fully effective | 2018 | 2026 |
-| Requirements | Data minimization, purpose limitation, consent | Risk assessment, transparency, human oversight |
-
----
-
-# EU AI & GDPR Acts
-
-- **The EU AI Act builds upon GDPR**:
-	- Extends GDPR's risk-based approach to AI systems
-	- Enhances transparency requirements for AI decision-making
-	- Emphasizes AI-specific data quality and rights protection
-	- Expands accountability to AI providers and users
-- **Complementary regulations**
-	- The EU AI Act does not contradict the GDPR Act.
-	- Rather it builds upon GDPR's foundation to
-	address the specific challenges posed by artificial intelligence.
+- World's first comprehensive AI regulation
+- Main Goal - Safer, ethical AI that respects people's rights
+- Balance trust and innovation
+- Adopted in 2024 and will be implemented gradually over 2025-2026
+- Complements GDPR for AI governance
 
 ---
 
-# Timelines
+## Risk Categories as per EU AI Act
 
-</br>
-
-<a href="https://kanad13.github.io/EU-AI-Act/decks/EU_AI_Act-timelines.html" target="_blank" rel="noopener noreferrer">Click here for an iterative view of the timelines.</a>
+![](./../assets/023-risk_categories_as_per_eu_ai_act.png)
 
 Note:
 
-- ![](./../assets//010-acts_timeline.png)
----
+```mermaid
+flowchart TB
+    subgraph "Unacceptable Risk"
+        J["Banned AI Practices"]
+        K["e.g. Social scoring"]
+        L["e.g. Manipulation tools"]
+    end
 
-# GDPR + EU AI Act
+    subgraph "High Risk"
+        M["Strict Compliance"]
+        N["e.g. Hiring tools"]
+        O["e.g. Credit scoring"]
+    end
 
-- GDPR lays the groundwork for data protection; the AI Act expands with specific AI requirements.
-- GDPR targets general data processing, while the AI Act tackles AI-specific challenges.
-- GDPR covers all personal data; the AI Act zeroes in on AI systems.
-- The AI Act introduces AI risk categories and human oversight needs.
+    subgraph "Limited Risk"
+        P["Transparency Required"]
+        Q["e.g. Chatbots"]
+        R["e.g. Deepfake warnings"]
+    end
 
----
-
-# Impact on Data Governance
-
-This section examines six key aspects of data governance in response to these regulations:
-
-1. **Data Collection and Consent**: Ensures lawful and transparent data collection.
-2. **Data Quality and Preparation**: Addresses biases and errors in data handling.
-3. **Data Security and Access Control**: Protects sensitive ML model information.
-4. **Data Minimization and Purpose Limitation**: Balances ML data needs with privacy principles.
-5. **Data Transparency and Explainability**: Builds trust and enables AI system oversight.
-6. **Data Subject Rights**: Ensures individual autonomy and control in AI decisions.
-
----
-
-## 1. Data Collection and Consent
-
-- **Purpose**
-	- Ensure lawful data collection and processing with authorization from data subjects.
-- **Regulatory Requirements**
-	- `GDPR Article 6`: Lawful bases for data processing
-	- `GDPR Article 7`:Explicit consent for ML training.
-	- `GDPR Articles 13-14`: Clear information on data collection, purpose, and rights.
-	- `GDPR Article 35`: Data Protection Impact Assessments (DPIAs) for high-risk AI use cases.
-	- `EU AI Act Article 10`: Data governance for high-risk AI systems.
-- **Practical Steps**
-	- Identify lawful data processing basis (e.g., consent, legitimate interests).
-	- Develop concise consent forms for ML training.
-	- Create transparent privacy notices for data use in ML.
-	- Implement a DPIA process for high-risk ML projects.
+    subgraph "Minimal Risk"
+        S["No Requirements"]
+        T["e.g. Spam filters"]
+        U["e.g. Translation tools"]
+    end
+```
 
 ---
 
-## 2. Data Quality and Preparation
+## Compliance for AI/ML Activities
 
-- **Purpose**
-	- Ensure high-quality, unbiased data for accurate ML models.
-- **Regulatory Requirements**
-	- `GDPR Article 5(1)(d)`: Accuracy and relevance of training data.
-	- `EU AI Act Article 10(3)`: Address biases to prevent discrimination.
-	- `EU AI Act Article 10`: Data validation and error handling.
-- **Practical Steps**
-	- Implement data cleaning to remove errors.
-	- Develop validation protocols for accuracy.
-	- Conduct regular data quality audits.
-	- Implement bias detection and mitigation.
-	- Document data preparation steps.
-
----
-
-## 3. Data Security and Access Control
-
-- **Purpose**
-	- Protect data confidentiality and integrity.
-- **Regulatory Requirements**
-	- `GDPR Article 32`: Technical and organizational safety measures.
-	- `EU AI Act Article 12`: Logging and traceability.
-- **Practical Steps**
-	- Use encryption for data at rest and transit.
-	- Establish role-based access control (RBAC).
-	- Apply pseudonymization techniques.
-	- Implement secure storage and transfer protocols.
-	- Set up logging and monitoring systems.
+- **Audit Trails**
+  - Log AI Decisions and Interactions
+  - Maintain Version History
+  - Data Quality and Bias Detection
+- **Transparency**
+  - Enhance Model Interpretability
+  - Create User-Friendly Explanations
+  - Handle User Inquiries Effectively
+- **Compliance**
+  - Establish Oversight Team
+  - Conduct Regular Audits
+  - Version Control for Datasets & Models
 
 ---
 
-## 4. Data Minimization and Purpose Limitation
-
-- **Purpose**
-	- Collect and use only necessary data.
-- **Regulatory Requirements**
-	- `GDPR Article 5(1)(c)`: Data minimization.
-	- `GDPR Article 6(4)`: Purpose limitation.
-	- `EU AI Act Article 10`: Align data use with AI purpose.
-- **Practical Steps**
-	- Conduct audits to remove unnecessary data.
-	- Implement data retention policies.
-	- Design models to minimize personal data use.
-	- Regularly review and update data purposes.
+# EU's Digital Policy Evolution
 
 ---
 
-## 5. Data Transparency and Explainability
+## EU Data Protection Timeline
 
-- **Purpose**
-	- Ensure transparency in data use and model decisions.
-- **Regulatory Requirements**
-	- `GDPR Article 15(1)(h)`: Explain AI decisions.
-	- `EU AI Act Articles 11-13`: Record-keeping and traceability.
-- **Practical Steps**
-	- Develop clear ML process documentation.
-	- Implement data lineage tracking.
-	- Use explainable AI techniques.
-	- Create user-friendly model decision explanations.
-	- Maintain and update AI documentation.
+![](./../assets/024-eu_data_protection_timeline.png)
 
----
+Note:
 
-## 6. Data Subject Rights
-
-- **Purpose**
-	- Respect and facilitate data subject rights in AI systems.
-- **Regulatory Requirements**
-	- `GDPR Articles 15-22`: Data subject rights (access, rectification, erasure, etc.)
-	- `GDPR Article 22`: Right not to be subject to solely automated decisions.
-	- `EU AI Act Article 52`: Transparency obligations for certain AI systems.
-	- `EU AI Act Articles 14, 29`: Human oversight & right to explanation for high-risk AI systems.
-- **Practical Steps**
-	- Implement systems for handling data subject access requests.
-	- Develop processes for data rectification and erasure in AI systems.
-	- Create mechanisms to opt out of solely automated decisions.
-	- Ensure AI systems can provide meaningful explanations for high-risk decisions.
-	- Implement human oversight measures for high-risk AI systems.
-	- Regularly train staff on handling data subject rights in AI context.
+```mermaid
+timeline
+    section Pre-GDPR Era
+        1995 : Data Protection Directive
+        2002 : ePrivacy Directive
+    section GDPR Era
+        2016 : GDPR Adopted
+        2018 : GDPR Enforcement
+    section AI Act Era
+        2024 : AI Act Adopted
+        2025-2026 : Gradual Implementation
+```
 
 ---
 
-# Best Practices
+## Evolution of EU Data Protection
 
-- Document all data sources, types, and flows.
-- Develop data rectification and erasure processes.
-- Ensure AI systems explain automated decisions.
-- Form cross-functional compliance teams.
-- Implement data version control and traceability.
-- Train staff on governance and compliance.
-- Deploy technical solutions like DLP.
-- Conduct periodic internal audits.
+![](./../assets/025-evolution_of_eu_data_protection.png)
 
----
+Note:
 
-# Practical Examples
+```mermaid
+graph TD
+    subgraph Era1["Fragmented Era (Pre-GDPR)"]
+        A1[Fragmented EU laws]
+        A2[Minimal enforcement]
+        A3[Limited rights]
+        A4[Tech outpaced regulations]
+    end
 
-- **Fair Data Preprocessing**
-	- Example: Credit Scoring
-		- Remove protected attributes like gender and race
-		- Apply reweighing or prejudice remover algorithms
-- **Federated Learning**
-	- Example: Healthcare Models
-		- Train on decentralized data
-		- Aggregate updates without central collection
-- **Explainable AI**
-	- Example: Insurance Risk
-		- Use interpretable models or SHAP values
-		- Highlight feature importance and decisions
-- **Continuous Monitoring**
-	- Example: Fraud Detection
-		- Detect data drift
-		- Automate retraining with oversight
+    subgraph Era2["Privacy Revolution (GDPR)"]
+        B1[Unified standards]
+        B2[Individual rights priority]
+        B3[Privacy by design]
+        B4[Strict penalties]
+    end
 
----
+    subgraph Era3["Ethical Frontier (AI Act)"]
+        C1[Ethical AI focus]
+        C2[Transparency & oversight]
+        C3[Quality AI training]
+        C4[Innovation vs protection]
+    end
 
-# Key Takeaways
-
-- Integrate data governance in AI/ML Lifecycle early.
-- Follow the GDPR and EU AI Act guidance for responsible data use.
-- Use a cross-functional approach combining legal, technical, and ethical aspects.
-- Prioritize continuous monitoring, auditing, and improvement in Data Governance practices.
+    Era1 --> |Led to need for<br>unified approach| Era2
+    Era2 --> |Evolved toward<br>ethical framework| Era3
+```
 
 ---
 
-# Further Reading
-
-- **Quick introduction to the EU AI Act in 2 mins**
-	- <a href="https://pdflink.to/eu-ai-act-kunal-pathak/" target="_blank" rel="noopener noreferrer">Learn More</a>
-	-  Iterative timeline for the EU AI Act - <a href="https://kanad13.github.io/EU-AI-Act/decks/EU_AI_Act-timelines.html"
-		target="_blank" rel="noopener noreferrer">Click here</a>
-- **How AI Act builds on GDPR**
-	- <a href="https://github.com/kanad13/EU-AI-Act/blob/main/decks/EU_AI_Act.md#gdpr--eu-ai-act" target="_blank" rel="noopener noreferrer">Learn More</a>
-- **Practical Guide to EU AI Act**
-	- <a href="https://github.com/kanad13/EU-AI-Act/decks/EU_AI_Act.md" target="_blank" rel="noopener noreferrer">Learn More</a>
-- **About the Author: Kunal Pathak**
-	- <a href="https://www.kunal-pathak.com" target="_blank" rel="noopener noreferrer">Portfolio Website</a>
-	- <a href="https://github.com/kanad13" target="_blank" rel="noopener noreferrer">GitHub Contributions</a>
-	- <a href="https://www.linkedin.com/in/kunal-pathak-profile/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+# GDPR + EU AI Act - Practical Impact
 
 ---
 
-# references
+## Data Governance in AI Age
 
-- Full Text of the GDPR Act - <a href="https://eur-lex.europa.eu/EN/legal-content/summary/general-data-protection-regulation-gdpr.html" target="_blank" rel="noopener noreferrer">click here</a>
-- Full Text of the EU AI Act - <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689" target="_blank" rel="noopener noreferrer">click here</a>
-- Up-to-date developments and analyses of the EU AI Act - <a href="https://artificialintelligenceact.eu" target="_blank" rel="noopener noreferrer">click here</a>
-- Details from the European Parliament Think Tank - <a href="https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI(2021)698792" target="_blank" rel="noopener noreferrer">click here</a>
+![](./../assets/026-data_governance_in_ai_age.png)
+
+Note:
+
+```mermaid
+flowchart TB
+
+    subgraph "Best Practices"
+        G["Regular audits"]
+        H["Clear explanations"]
+        I["Continuous monitoring"]
+    end
+
+    subgraph "Governance Requirements"
+        D["Documentation"]
+        E["Risk assessments"]
+        F["Human oversight"]
+    end
+
+    subgraph "Data Quality & Ethics"
+        A["Bias detection"]
+        B["Fair preprocessing"]
+        C["Quality controls"]
+    end
+```
+
 
 ---
 
-# Important Note
+## Navigating the fine line
 
-- The content in this repository includes material from official European Union publications, which is subject to the
-following copyright notice: © European Union, 1995-2024
-- The information presented in this presentation regarding the GDPR & EU AI Acts is based on my personal understanding and
-interpretation. These insights and recommendations are my own and do not represent the official stance of any company,
-organization, or the European Union.
-- This presentation is for informational purposes only and should not be considered as legal advice.
-- For the most accurate and up-to-date information, please refer to official EU resources.
-- I am not afflicted in any way to the European Union. I am presenting this information as an individual interested in
-the topic.
-- No copyright infringement is intended. All legal rights belong to the EU. The material used in this presentation is
-for educational purposes and falls under fair use.
-- I bear no legal responsibility for any actions taken based on the information provided in this presentation.
-- Companies and individuals should conduct their own research and consult with qualified legal & technical experts
-before implementing any compliance measures.
+- **Avoid Literal Compliance**
+  - Intrusive cookie banners create “consent fatigue”.
+  - Overly strict data deletion risks losing valuable insights.
+  - Complex AI disclosures meet compliance but confuse users.
+- **Embrace Spirit of Data Governance**
+  - User-friendly consent fosters autonomy and trust.
+  - Balanced data retention upholds privacy without sacrificing business value.
+  - Clear, accessible AI explanations build user confidence.
+- **Adopt Ethical Mindset**
+  - Put user autonomy at the core of compliance
+  - Balance privacy protection with responsible data use
+  - Aim for genuine transparency in AI explanations
+
+---
+
+## Key Takeaways
+
+![](./../assets/027-key_takeaways.png)
+
+Note:
+
+```mermaid
+graph TD
+    A[Key Takeaways] --> B[Integrate compliance early into Data Lifecycle]
+    A --> C[Balance innovation with ethics]
+    A --> D[Prioritize data quality and transparency]
+```
+
+---
+
+# More Details on EU AI Act
+
+- **About the EU AI Act**
+	- Download [my quick 2-minute introduction](https://www.kunal-pathak.com/blog/eu-ai-act/)  to the EU AI Act.
+	- Deep dive with [my comprehensive guide to EU AI Act](https://github.com/kanad13/EU-AI-Act/blob/main/decks/EU_AI_Act.md).
+- **Data Governance for AI**
+	- My presentation about Data Governance in view of [GDPR and EU AI Act](https://kanad13.github.io/EU-AI-Act/decks/data-governance.html).
+	- For deeper insights on these topics, visit [my GitHub repository](https://kanad13.github.io/EU-AI-Act/).
 
 ---
 
